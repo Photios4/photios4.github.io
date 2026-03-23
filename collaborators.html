@@ -16,10 +16,7 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
-
-    <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menucollapse.js"></script>
     <script type="text/javascript" src="js/arrow78.js"></script>
@@ -49,33 +46,47 @@
         }
 
         .collaborator-card {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            min-height: 220px;
         }
 
         .img-logos {
             max-width: 150px;
             height: auto;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 12px auto;
             display: block;
         }
 
         .dropdown {
             margin-top: 10px;
+            text-align: center;
+        }
+
+        .dropdown > a {
+            display: inline-block;
+            margin-top: 5px;
         }
 
         .dropdown-content {
             display: none;
-            margin-top: 10px;
-            padding: 10px;
+            margin-top: 12px;
+            padding: 10px 14px;
             background-color: #f5f5f5;
             text-align: left;
             border-radius: 4px;
+            border: 1px solid #e0e0e0;
         }
 
         .dropdown-content a {
             display: block;
             padding: 4px 0;
             word-break: break-word;
+        }
+
+        @media (min-width: 768px) {
+            .dropdown-content {
+                min-height: 110px;
+            }
         }
 
         @media (max-width: 767px) {
@@ -100,34 +111,21 @@
                 width: 100%;
             }
 
-            .container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            .collaborators-content {
-                margin-top: 10px;
-            }
-
             .collaborators-content h3 {
                 font-size: 24px;
             }
 
-            .collaborators-content,
-            .collaborators-content p,
-            .collaborators-content div,
-            .collaborators-content a {
-                font-size: 15px;
-                line-height: 1.6;
-            }
-
-            .btn.btn-lg {
-                font-size: 14px;
-                padding: 10px 12px;
-            }
-
             .img-logos {
                 max-width: 120px;
+            }
+
+            .collaborator-card {
+                min-height: auto;
+                margin-bottom: 25px;
+            }
+
+            .dropdown-content {
+                text-align: left;
             }
 
             footer p {
@@ -171,7 +169,7 @@
                             </button>
                         </b>
 
-                        <div class="allshow" style="display:none;" id="tab-research-content">
+                        <div class="allshow" id="tab-research-content">
                             <h3>Collaborators</h3>
 
                             <div class="row" style="margin-top:30px;">
@@ -181,7 +179,7 @@
                                         <img border="0" class="img-logos" src="images/logos/kth_logo.png" alt="KTH">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick1(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators1'); return false;">See collaborators</a>
                                         <div id="collaborators1" class="dropdown-content">
                                             <a target="_blank" href="https://people.kth.se/~skoglund/">Prof. M. Skoglund</a>
                                             <a target="_blank" href="https://www.kth.se/profile/oech">Prof. T. Oechtering</a>
@@ -196,7 +194,7 @@
                                         <img border="0" class="img-logos" src="images/logos/eurecom.png" alt="EURECOM">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick2(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators2'); return false;">See collaborators</a>
                                         <div id="collaborators2" class="dropdown-content">
                                             <a target="_blank" href="https://www.eurecom.fr/~kountour/">Prof. M. Kountouris</a>
                                             <a target="_blank" href="https://www.eurecom.fr/en/people/serra-giuseppe">Mr G. Serra</a>
@@ -210,7 +208,7 @@
                                         <img border="0" class="img-logos" src="images/logos/LiU_logo.png" alt="Linkoping University">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick3(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators3'); return false;">See collaborators</a>
                                         <div id="collaborators3" class="dropdown-content">
                                             <a target="_blank" href="https://liu.se/en/employee/zhech93">Prof. Z. Chen</a>
                                         </div>
@@ -222,7 +220,7 @@
                                         <img border="0" class="img-logos" src="images/logos/aalborg-logo.png" alt="Aalborg University">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick4(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators4'); return false;">See collaborators</a>
                                         <div id="collaborators4" class="dropdown-content">
                                             <a target="_blank" href="http://kom.aau.dk/~jo/">Prof. J. &#216;stergaard</a>
                                         </div>
@@ -234,7 +232,7 @@
                                         <img border="0" class="img-logos" src="images/logos/Purdue_logo.png" alt="Purdue University">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick5(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators5'); return false;">See collaborators</a>
                                         <div id="collaborators5" class="dropdown-content">
                                             <a target="_blank" href="https://people.kth.se/~ttanaka/">Prof. T. Tanaka</a>
                                         </div>
@@ -246,7 +244,7 @@
                                         <img border="0" class="img-logos" src="images/logos/ucy-logo.png" alt="University of Cyprus">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick7(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators7'); return false;">See collaborators</a>
                                         <div id="collaborators7" class="dropdown-content">
                                             <a target="_blank" href="http://www.eng.ucy.ac.cy/chadcha/">Prof. C. D. Charalambous</a>
                                             <a target="_blank" href="http://www.themistoklis.org/">Prof. T. Charalambous</a>
@@ -260,7 +258,7 @@
                                         <img border="0" class="img-logos" src="images/logos/epfl_logo_1.png" alt="EPFL">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick8(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators8'); return false;">See collaborators</a>
                                         <div id="collaborators8" class="dropdown-content">
                                             <a target="_blank" href="https://theory.epfl.ch/yanina/">Prof. Y. Shkel</a>
                                         </div>
@@ -272,7 +270,7 @@
                                         <img border="0" class="img-logos" src="images/logos/yale-logo.png" alt="Yale University">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick9(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators9'); return false;">See collaborators</a>
                                         <div id="collaborators9" class="dropdown-content">
                                             <a target="_blank" href="https://statistics.yale.edu/people/sekhar-tatikonda">Prof. S. Tatikonda</a>
                                         </div>
@@ -284,7 +282,7 @@
                                         <img border="0" class="img-logos" src="images/logos/uottawa-logo.png" alt="University of Ottawa">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick10(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators10'); return false;">See collaborators</a>
                                         <div id="collaborators10" class="dropdown-content">
                                             <a target="_blank" href="http://www.site.uottawa.ca/~ahmed/">Prof. N. U. Ahmed</a>
                                             <a target="_blank" href="http://www.site.uottawa.ca/~sloyka/">Prof. S. Loyka</a>
@@ -297,7 +295,7 @@
                                         <img border="0" class="img-logos" src="images/logos/ericsson-logo.png" alt="Ericsson">
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" onclick="openOnClick11(); return false;">See collaborators</a>
+                                        <a href="#" onclick="toggleBox('collaborators11'); return false;">See collaborators</a>
                                         <div id="collaborators11" class="dropdown-content">
                                             <a target="_blank" href="">Dr B. A. Mouris</a>
                                             <a target="_blank" href="">Dr B. Cavarec</a>
@@ -314,7 +312,6 @@
         </div>
     </section>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70084577-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -334,70 +331,13 @@
     </footer>
 
     <script>
-    function openOnClick1() {
-         var elem = document.getElementById("collaborators1");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick2() {
-         var elem = document.getElementById("collaborators2");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick3() {
-         var elem = document.getElementById("collaborators3");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick4() {
-         var elem = document.getElementById("collaborators4");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick5() {
-         var elem = document.getElementById("collaborators5");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick6() {
-         var elem = document.getElementById("collaborators6");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick7() {
-         var elem = document.getElementById("collaborators7");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick8() {
-         var elem = document.getElementById("collaborators8");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick9() {
-         var elem = document.getElementById("collaborators9");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick10() {
-         var elem = document.getElementById("collaborators10");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
-    }
-
-    function openOnClick11() {
-         var elem = document.getElementById("collaborators11");
-         var hide = elem.style.display == "table";
-         elem.style.display = hide ? "none" : "table";
+    function toggleBox(id) {
+        var elem = document.getElementById(id);
+        if (elem.style.display === "block") {
+            elem.style.display = "none";
+        } else {
+            elem.style.display = "block";
+        }
     }
     </script>
 
