@@ -1,352 +1,405 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8"/>
-        <title>Photios A. Stavrou</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-         <script src="js/html5shiv.js"></script>
-         <script src="js/respond.min.js"></script>
-         <![endif]-->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!-- http://getbootstrap.com/customize/ change "@screen-sm" -> "@screen-md" in @grid-float-breakpoint -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/menucollapse.js"></script>
-        <script type="text/javascript" src="js/arrow78.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-    </head>
-    
-    <body id="page-top" class="index">
+<head>
+    <meta charset="utf-8"/>
+    <title>Photios A. Stavrou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menucollapse.js"></script>
+    <script type="text/javascript" src="js/arrow78.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .collaborators-section {
+            margin-top: 20px;
+        }
+
+        .collaborators-content {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .collaborators-content h3 {
+            margin-top: 0;
+        }
+
+        .collaborator-card {
+            margin-bottom: 30px;
+        }
+
+        .img-logos {
+            max-width: 150px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: block;
+        }
+
+        .dropdown {
+            margin-top: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 4px 0;
+            word-break: break-word;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-top: 0;
+            }
+
+            .navbar-fixed-top.navbar {
+                position: relative;
+            }
+
+            .nav-wrapper a {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 10px 15px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .title-navbar {
+                display: block;
+                width: 100%;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .collaborators-content {
+                margin-top: 10px;
+            }
+
+            .collaborators-content h3 {
+                font-size: 24px;
+            }
+
+            .collaborators-content,
+            .collaborators-content p,
+            .collaborators-content div,
+            .collaborators-content a {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .btn.btn-lg {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .img-logos {
+                max-width: 120px;
+            }
+
+            footer p {
+                font-size: 13px;
+                padding: 0 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top" class="index">
+
     <nav>
         <div class="navbar-border nav-wrapper navbar-fixed-top navbar">
             <a class="active" href="index.html"><i class="glyphicon glyphicon-home fa fa-fw"></i> Home</a>
             <a href="cv_1.html"><i class="fa-fw"></i> Curriculum Vitae</a>
-            <a href="projects.html"><i class="fa-fw"></i> Projects</a> 
+            <a href="projects.html"><i class="fa-fw"></i> Projects</a>
             <a href="publications.html"><i class="fa-fw"></i> Publications</a>
             <a href="collaborators.html"><i class="fa-fw"></i> Collaborators</a>
             <a href="mentoring.html"><i class="fa-fw"></i> Mentoring</a>
-			<a href="openings.html"><i class="fa-fw"></i> Openings</a>
+            <a href="openings.html"><i class="fa-fw"></i> Openings</a>
             <!--<a href="#search"><i class="glyphicon glyphicon-search fa fa-fw"></i> Search</a>-->
             <a class="title-navbar" href="https://www.eurecom.fr/en/home">EURECOM, SophiaTech</a>
         </div>
     </nav>
-        
-        <section>
-            <!-- Place this tag where you want the search results to render -->
-            <gcse:searchresults-only></gcse:searchresults-only>
-        </section>
-        
+
+    <section>
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </section>
+
+    <section name="research" id="research" class="collaborators-section">
         <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="collaborators-content lead">
 
-                <!-- Recent Activities Section -->
-        <section  name="research" id="research">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:30px" class="col-md-12">
-                    <b class="noshow" style="display:none;" id="tab-3">
-                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-research-content').toggle();">Collaborators  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-research-content">
-                    <h3>Collaborators</h3>
-                        <div style="margin-top:30px" class="container">
-                            <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.kth.se/en"><img border="0" class="img-logos" src="images/logos/kth_logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick1()">See collaborators</a>
-                                            <div id="collaborators1" class="dropdown-content">
-                                                <a target="_blank"  href="https://people.kth.se/~skoglund/"> Prof. M. Skoglund</a>
-                                                <a target="_blank"  href="https://www.kth.se/profile/oech"> Prof. T. Oechtering</a>
-                                                <a target="_blank"  href="https://www.kth.se/profile/matben"> Prof. M. Bengtsson</a>
-												<a target="_blank"  href="https://www.kth.se/profile/ragnart"> Prof. R. Thobaben</a>
-												<!--<a target="_blank"  href="https://www.kth.se/profile/hamidgh"> Mr H. Ghourchian</a>-->
-                                                <!--<a target="_blank"  href="https://www.kth.se/profile/mmyl"> Mr M. Mylonakis</a>-->
-												<!--<a target="_blank"  href="https://www.kth.se/profile/cavarec"> Mr B. Cavarec</a>
-												<a target="_blank"  href="https://www.kth.se/profile/boules"> Mr B. A. Mouris</a>-->
-											</div>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="http://www.eurecom.fr/en/"><img border="0" class="img-logos" src="images/logos/eurecom.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick2()">See collaborators</a>
-                                            <div id="collaborators2" class="dropdown-content">
-                                                <a target="_blank"  href="https://www.eurecom.fr/~kountour/">Prof. M. Kountouris</a>
-												<a target="_blank"  href="https://www.eurecom.fr/en/people/serra-giuseppe">Mr G. Serra</a>
-												<a target="_blank"  href="https://www.eurecom.fr/en/people/sun-chenyu"> Mr C. Sun</a>
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div>
-								
-								
-								<div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://liu.se/en"><img border="0" class="img-logos" src="images/logos/LiU_logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick3()">See collaborators</a>
-                                            <div id="collaborators3" class="dropdown-content">
-                                                <a target="_blank"  href="https://liu.se/en/employee/zhech93">Prof. Z. Chen</a>
-										     </div>
-                                        </div>    
-                                    </div>
-                                </div>
-								
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="http://www.en.aau.dk/"><img border="0" class="img-logos" src="images/logos/aalborg-logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick4()">See collaborators</a>
-                                            <div id="collaborators4" class="dropdown-content">
-                                                <a target="_blank"  href="http://kom.aau.dk/~jo/"> Prof. J. &#216;stergaard</a>
-                                                <!--<a target="_blank"  href=""> Dr M. Barforooshan</a>-->
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div> 
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.purdue.edu/"><img border="0" class="img-logos" src="images/logos/Purdue_logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick5()">See collaborators</a>
-                                            <div id="collaborators5" class="dropdown-content">
-                                                <a target="_blank"  href="https://people.kth.se/~ttanaka/"> Prof. T. Tanaka</a>
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div>
-                                 <!--<div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.metu.edu.tr/"><img border="0" class="img-logos" src="images/logos/metu-logo1.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick6()">See collaborators</a>
-                                            <div id="collaborators6" class="dropdown-content">
-                                                <a target="_blank"  href="https://users.metu.edu.tr/ssaritas/"> Prof. S. Sar&#305;ta&#351</a>
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div>-->								
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="http://www.ucy.ac.cy/en/"><img border="0" class="img-logos" src="images/logos/ucy-logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick7()">See collaborators</a>
-                                            <div id="collaborators7" class="dropdown-content">
-                                                <a target="_blank"  href="http://www.eng.ucy.ac.cy/chadcha/"> Prof. C. D. Charalambous</a>
-												 <a target="_blank"  href="http://www.themistoklis.org/">Prof. T. Charalambous</a>
-                                                <!--<a target="_blank"  href="http://www.christoskourtellaris.com/"> Dr C. K. Kourtellaris</a>-->
-                                                <a target="_blank"  href="http://www.ioannistzortzis.com/"> Dr I. Tzortzis</a>       
-										    </div>
-                                        </div>    
-                                    </div>
-                                </div> 
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.epfl.ch/en/"><img border="0" class="img-logos" src="images/logos/epfl_logo_1.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick8()">See collaborators</a>
-                                            <div id="collaborators8" class="dropdown-content">
-                                                <a target="_blank"  href="https://theory.epfl.ch/yanina/"> Prof. Y. Shkel</a>
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.yale.edu/"><img border="0" class="img-logos" src="images/logos/yale-logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick9()">See collaborators</a>
-                                            <div id="collaborators9" class="dropdown-content">
-                                                <a target="_blank"  href="https://statistics.yale.edu/people/sekhar-tatikonda"> Prof. S. Tatikonda</a>
-                                            </div>
-                                        </div>    
-                                    </div>
-                                </div> 
-                                <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.uottawa.ca/en"><img border="0" class="img-logos" src="images/logos/uottawa-logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick10()">See collaborators</a>
-                                            <div id="collaborators10" class="dropdown-content">
-                                                <a target="_blank"  href="http://www.site.uottawa.ca/~ahmed/"> Prof. N. U. Ahmed</a>
-                                                <a target="_blank"  href="http://www.site.uottawa.ca/~sloyka/"> Prof. S. Loyka</a>                                                </div>
-                                        </div>    
-                                    </div>
-                                </div>
-                             <div class="col-md-3 text-center">
-                                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
-                                        <a target="_blank" href="https://www.ericsson.com/en"><img border="0" class="img-logos" src="images/logos/ericsson-logo.png" width="150"></a>
-                                        <div class="dropdown">
-                                            <a href="#" onclick="openOnClick11()">See collaborators</a>
-                                            <div id="collaborators11" class="dropdown-content">
-                                                <a target="_blank"  href=""> Dr B. A. Mouris</a>
-                                                <a target="_blank"  href=""> Dr B. Cavarec</a>                                                </div>
-                                        </div>    
-                                    </div>
-                                </div>    
+                        <b class="noshow" style="display:none;" id="tab-3">
+                            <button class="btn btn-default btn-lg btn-block" style="display:block; width:100%;" onclick="javascript:$('#tab-research-content').toggle();">
+                                Collaborators <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                        </b>
 
-								
-                            </div>            
+                        <div class="allshow" style="display:none;" id="tab-research-content">
+                            <h3>Collaborators</h3>
+
+                            <div class="row" style="margin-top:30px;">
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.kth.se/en">
+                                        <img border="0" class="img-logos" src="images/logos/kth_logo.png" alt="KTH">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick1(); return false;">See collaborators</a>
+                                        <div id="collaborators1" class="dropdown-content">
+                                            <a target="_blank" href="https://people.kth.se/~skoglund/">Prof. M. Skoglund</a>
+                                            <a target="_blank" href="https://www.kth.se/profile/oech">Prof. T. Oechtering</a>
+                                            <a target="_blank" href="https://www.kth.se/profile/matben">Prof. M. Bengtsson</a>
+                                            <a target="_blank" href="https://www.kth.se/profile/ragnart">Prof. R. Thobaben</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="http://www.eurecom.fr/en/">
+                                        <img border="0" class="img-logos" src="images/logos/eurecom.png" alt="EURECOM">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick2(); return false;">See collaborators</a>
+                                        <div id="collaborators2" class="dropdown-content">
+                                            <a target="_blank" href="https://www.eurecom.fr/~kountour/">Prof. M. Kountouris</a>
+                                            <a target="_blank" href="https://www.eurecom.fr/en/people/serra-giuseppe">Mr G. Serra</a>
+                                            <a target="_blank" href="https://www.eurecom.fr/en/people/sun-chenyu">Mr C. Sun</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://liu.se/en">
+                                        <img border="0" class="img-logos" src="images/logos/LiU_logo.png" alt="Linkoping University">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick3(); return false;">See collaborators</a>
+                                        <div id="collaborators3" class="dropdown-content">
+                                            <a target="_blank" href="https://liu.se/en/employee/zhech93">Prof. Z. Chen</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="http://www.en.aau.dk/">
+                                        <img border="0" class="img-logos" src="images/logos/aalborg-logo.png" alt="Aalborg University">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick4(); return false;">See collaborators</a>
+                                        <div id="collaborators4" class="dropdown-content">
+                                            <a target="_blank" href="http://kom.aau.dk/~jo/">Prof. J. &#216;stergaard</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.purdue.edu/">
+                                        <img border="0" class="img-logos" src="images/logos/Purdue_logo.png" alt="Purdue University">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick5(); return false;">See collaborators</a>
+                                        <div id="collaborators5" class="dropdown-content">
+                                            <a target="_blank" href="https://people.kth.se/~ttanaka/">Prof. T. Tanaka</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="http://www.ucy.ac.cy/en/">
+                                        <img border="0" class="img-logos" src="images/logos/ucy-logo.png" alt="University of Cyprus">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick7(); return false;">See collaborators</a>
+                                        <div id="collaborators7" class="dropdown-content">
+                                            <a target="_blank" href="http://www.eng.ucy.ac.cy/chadcha/">Prof. C. D. Charalambous</a>
+                                            <a target="_blank" href="http://www.themistoklis.org/">Prof. T. Charalambous</a>
+                                            <a target="_blank" href="http://www.ioannistzortzis.com/">Dr I. Tzortzis</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.epfl.ch/en/">
+                                        <img border="0" class="img-logos" src="images/logos/epfl_logo_1.png" alt="EPFL">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick8(); return false;">See collaborators</a>
+                                        <div id="collaborators8" class="dropdown-content">
+                                            <a target="_blank" href="https://theory.epfl.ch/yanina/">Prof. Y. Shkel</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.yale.edu/">
+                                        <img border="0" class="img-logos" src="images/logos/yale-logo.png" alt="Yale University">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick9(); return false;">See collaborators</a>
+                                        <div id="collaborators9" class="dropdown-content">
+                                            <a target="_blank" href="https://statistics.yale.edu/people/sekhar-tatikonda">Prof. S. Tatikonda</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.uottawa.ca/en">
+                                        <img border="0" class="img-logos" src="images/logos/uottawa-logo.png" alt="University of Ottawa">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick10(); return false;">See collaborators</a>
+                                        <div id="collaborators10" class="dropdown-content">
+                                            <a target="_blank" href="http://www.site.uottawa.ca/~ahmed/">Prof. N. U. Ahmed</a>
+                                            <a target="_blank" href="http://www.site.uottawa.ca/~sloyka/">Prof. S. Loyka</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 text-center collaborator-card">
+                                    <a target="_blank" href="https://www.ericsson.com/en">
+                                        <img border="0" class="img-logos" src="images/logos/ericsson-logo.png" alt="Ericsson">
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" onclick="openOnClick11(); return false;">See collaborators</a>
+                                        <div id="collaborators11" class="dropdown-content">
+                                            <a target="_blank" href="">Dr B. A. Mouris</a>
+                                            <a target="_blank" href="">Dr B. Cavarec</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70084577-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        </div>
+    </section>
 
-  gtag('config', 'UA-70084577-1');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70084577-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-70084577-1');
+    </script>
 
-    </div>        
-    
     <hr class="star-primary">
+
     <footer>
         <small>
             <center>
-            <p>Copyright &copy; 2026 Photios A. Stavrou. All rights reserved.</p>
+                <p>Copyright &copy; 2026 Photios A. Stavrou. All rights reserved.</p>
             </center>
         </small>
     </footer>
 
     <script>
-    function openOnClick1()
-    {
-         var elem=document.getElementById("collaborators1");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+    function openOnClick1() {
+         var elem = document.getElementById("collaborators1");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick2()
-	{
-	      var elem=document.getElementById("collaborators2");
-          var hide = elem.style.display =="table";
-          if (hide) {
-            elem.style.display="none";
-       } 
-       else {
-       elem.style.display="table";
-       }
-  }
-    function openOnClick3()
-    {
-         var elem=document.getElementById("collaborators3");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick2() {
+         var elem = document.getElementById("collaborators2");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick4()
-    {
-         var elem=document.getElementById("collaborators4");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick3() {
+         var elem = document.getElementById("collaborators3");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick5()
-    {
-         var elem=document.getElementById("collaborators5");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick4() {
+         var elem = document.getElementById("collaborators4");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick6()
-    {
-         var elem=document.getElementById("collaborators6");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick5() {
+         var elem = document.getElementById("collaborators5");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick7()
-    {
-         var elem=document.getElementById("collaborators7");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick6() {
+         var elem = document.getElementById("collaborators6");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    function openOnClick8()
-    {
-         var elem=document.getElementById("collaborators8");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick7() {
+         var elem = document.getElementById("collaborators7");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-	function openOnClick9()
-    {
-         var elem=document.getElementById("collaborators9");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick8() {
+         var elem = document.getElementById("collaborators8");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-	function openOnClick10()
-    {
-         var elem=document.getElementById("collaborators10");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick9() {
+         var elem = document.getElementById("collaborators9");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-	function openOnClick11()
-    {
-         var elem=document.getElementById("collaborators11");
-         var hide = elem.style.display =="table";
-         if (hide) {
-             elem.style.display="none";
-        } 
-        else {
-           elem.style.display="table";
-        }
+
+    function openOnClick10() {
+         var elem = document.getElementById("collaborators10");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
     }
-    </script>        
-    </body>
+
+    function openOnClick11() {
+         var elem = document.getElementById("collaborators11");
+         var hide = elem.style.display == "table";
+         elem.style.display = hide ? "none" : "table";
+    }
+    </script>
+
+</body>
 </html>
