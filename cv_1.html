@@ -45,6 +45,15 @@
             margin-top: 0;
         }
 
+        /* desktop: show content, hide button */
+        .mobile-cv-toggle {
+            display: none;
+        }
+
+        #tab-cv-content {
+            display: block;
+        }
+
         @media (max-width: 767px) {
             body {
                 padding-top: 0;
@@ -97,6 +106,16 @@
                 padding: 0 10px;
                 text-align: center;
             }
+
+            /* mobile: show button */
+            .mobile-cv-toggle {
+                display: block;
+            }
+
+            /* mobile: content starts hidden */
+            #tab-cv-content {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -127,21 +146,23 @@
                 <div class="col-xs-12">
                     <div class="cv-content lead">
 
-                        <b class="noshow" style="display:none;" id="tab-3">
-                            <button class="btn btn-default btn-lg btn-block" style="display:block; width:100%;" onclick="javascript:$('#tab-cv-content').toggle();">
+                        <div class="mobile-cv-toggle">
+                            <button class="btn btn-default btn-lg btn-block" onclick="$('#tab-cv-content').toggle();">
                                 Curriculum Vitae <span class="glyphicon glyphicon-chevron-down"></span>
                             </button>
-                        </b>
+                        </div>
 
-                        <h3>Curriculum Vitae</h3>
+                        <div id="tab-cv-content">
+                            <h3>Curriculum Vitae</h3>
 
-                        <p>
-                            My detailed CV is available only upon professional request:
-                            <script language="JavaScript">
-                                document.write("&nbsp;");
-                                spiderjam('fotios.stavrou','eurecom.fr');
-                            </script>
-                        </p>
+                            <p>
+                                My detailed CV is available only upon professional request:
+                                <script language="JavaScript">
+                                    document.write("&nbsp;");
+                                    spiderjam('fotios.stavrou','eurecom.fr');
+                                </script>
+                            </p>
+                        </div>
 
                     </div>
                 </div>
