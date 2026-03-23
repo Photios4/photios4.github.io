@@ -1,868 +1,791 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8"/>
-        <title>Photios A. Stavrou</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="css/font-awesome.min.css"/>
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-         <script src="js/html5shiv.js"></script>
-         <script src="js/respond.min.js"></script>
-         <![endif]-->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!-- http://getbootstrap.com/customize/ change "@screen-sm" -> "@screen-md" in @grid-float-breakpoint -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/menucollapse.js"></script>
-        <script type="text/javascript" src="js/arrow78.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-    </head>
-    
-    <body id="page-top" class="index">
+<head>
+    <meta charset="utf-8"/>
+    <title>Photios A. Stavrou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menucollapse.js"></script>
+    <script type="text/javascript" src="js/arrow78.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .publications-section {
+            margin-top: 20px;
+        }
+
+        .publications-content {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .publications-content h3 {
+            margin-top: 0;
+        }
+
+        .table-mobile-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pub-table {
+            width: 100%;
+        }
+
+        .pub-table td {
+            padding: 4px 2px;
+            vertical-align: top;
+        }
+
+        .section-toggle {
+            display: inline-block;
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-top: 0;
+            }
+
+            .navbar-fixed-top.navbar {
+                position: relative;
+            }
+
+            .nav-wrapper a {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 10px 15px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .title-navbar {
+                display: block;
+                width: 100%;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .publications-content {
+                margin-top: 10px;
+            }
+
+            .publications-content h3 {
+                font-size: 24px;
+            }
+
+            .publications-content,
+            .publications-content p,
+            .publications-content div,
+            .publications-content td,
+            .publications-content li,
+            .publications-content a {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .btn.btn-lg {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .pub-table td:first-child {
+                width: 35px !important;
+                white-space: nowrap;
+            }
+
+            footer p {
+                font-size: 13px;
+                padding: 0 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top" class="index">
+
     <nav>
         <div class="navbar-border nav-wrapper navbar-fixed-top navbar">
             <a class="active" href="index.html"><i class="glyphicon glyphicon-home fa fa-fw"></i> Home</a>
             <a href="cv_1.html"><i class="fa-fw"></i> Curriculum Vitae</a>
-            <a href="projects.html"><i class="fa-fw"></i> Projects</a> 
+            <a href="projects.html"><i class="fa-fw"></i> Projects</a>
             <a href="publications.html"><i class="fa-fw"></i> Publications</a>
             <a href="collaborators.html"><i class="fa-fw"></i> Collaborators</a>
             <a href="mentoring.html"><i class="fa-fw"></i> Mentoring</a>
-			<a href="openings.html"><i class="fa-fw"></i> Openings</a>
+            <a href="openings.html"><i class="fa-fw"></i> Openings</a>
             <!--<a href="#search"><i class="glyphicon glyphicon-search fa fa-fw"></i> Search</a>-->
             <a class="title-navbar" href="https://www.eurecom.fr/en/home">EURECOM, SophiaTech</a>
         </div>
     </nav>
-        
-        <section>
-            <!-- Place this tag where you want the search results to render -->
-            <gcse:searchresults-only></gcse:searchresults-only>
-        </section>
-        
+
+    <section>
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </section>
+
+    <section name="research" id="research" class="publications-section">
         <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="publications-content lead">
 
+                        <b class="noshow" style="display:none;" id="tab-3">
+                            <button class="btn btn-default btn-lg btn-block" style="display:block; width:100%;" onclick="javascript:$('#tab-research-content').toggle();">
+                                Publications <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                        </b>
 
-                <!-- Recent Activities Section -->
-        <section  name="research" id="research">
-            <div class="container lead">
-                <div style="text-align: left; margin-top:30px" class="col-md-12">
-                    
-					
-                    <b class="noshow" style="display:none;" id="tab-3">
-                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-research-content').toggle();">Publications  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                    </b>
-                    <div class="allshow" style="display:none;" id="tab-research-content">
-                        <h3>Publications</h3>
+                        <div class="allshow" style="display:none;" id="tab-research-content">
+                            <h3>Publications</h3>
 
-                            <table border="0" width="100%" id="researchdescription" cellpadding="1">
-                                <tr>
-                                    <td colspan="2" width="100%" align="center" valign="top"  ><b><font color=#0F5B7F> <p>List of Publications</p></font></b></td>
-                                </tr>
-                                
-                                    <td><div id="Pubmain" style="width: 100%; background-color:  #f5f5f5f5f5f5;">
-                                    <!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV-->
-                                    <div style="padding: 0px 0px 0px 0px;">
-                                    <b><font color="#0F5B7F"><a href="#" onclick="openOnClick1()" name="thesis_publications" id="thesis"> Thesis (click)</a></font></b><br />
-                                        <table border="0"  hidden="true" width="100%" id="thesis_publications" cellpadding="1"> 
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[2]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou,</b> <i>"Extremum Problems of Directed Information"</i>, Ph.D Thesis, University of Cyprus, 2016.<br/> 
-                                                <a target="_blank"  href="https://gnosis.library.ucy.ac.cy/bitstream/handle/7/39276/Photios%20Stavrou%20PhD.pdf?sequence=3"> Ph.D Thesis</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[1]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou,</b> <i>"Investigation of wireless communication systems with diversity receivers and simulation by using a 
-                                                specialized software designing package called VisSim/Comm"</i>, (Dipl. Thesis), Aristotle University of Thessaloniki (AUTH), 2008.<br/> 
-                                                <a target="_blank"  href=""> Diploma Thesis (in Greek)</a></td>
-                                            </tr>        
-                                        </table>
-                                        <br/>
-
-                                    <b><font color="#0F5B7F"><a href="#" onclick="openOnClick2()" name="book_chapters_publications" id="book_chapters">Book Chapters (click)</a></font></b><br />
-                                        <table border="0"  hidden="true" width="100%" id="book_chapters_publications" cellpadding="1">
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[4]</td>
-                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris, and <b>P. A. Stavrou</b>, <i>"On Shannon's duality of a source
-                                                and a channel and nonanticipative communication and communication for control,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2">
-                                                <b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 291-305, November 2014</a>.<br/> 
-                                                <a target="_blank"  href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_35">Full Text</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[3]</td>
-                                                <td align="justify" valign="top">C. D. Charalambous, <b>P. A. Stavrou</b>, and C. K. Kourtellaris, <i>"Directed information on abstract
-                                                    spaces: Properties and extremum Problems,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2">
-                                                <b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 307-315, November 2014</a>.<br/> 
-                                                <a target="_blank"  href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_36">Full Text</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[2]</td>
-                                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, C. K. Kourtellaris, and C. D. Charalambous, <i>"Information nonanticipative rate distortion function and its applications,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2">
-                                                <b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 317-324, November 2014</a>.<br/> 
-                                                <a target="_blank"  href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_37">Full Text</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[1]</td>
-                                                <td align="justify" valign="top"> C. K. Kourtellaris, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Nonanticipative duality of sources
-                                                    and channels with memory and feedback,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2">
-                                                <b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 325-335, November 2014</a>.<br/> 
-                                                <a target="_blank"  href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_38">Full Text</a></td>
-                                            </tr>				   
-                                        </table>	
-                                        <br/>
-                                    
-                                    <b><font color="#0F5B7F"><a href="#" onclick="openOnClick3()" name="journal_publications" id="journals">Journals (click)</a></font></b><br/>
-                                        <table border="0"  hidden="true" width="100%" id="journal_publications" cellpadding="1">
-
-                                           <tr>
-                                                <td width="25" align="left" valign="top">[23]</td>
-                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Cost-free personalization via information-geometric projection in Bayesian federated learning,"</i> <a target="_blank" href="https://jmlr.org/tmlr/"><b> Transactions on Machine Learning Research (TMRL)</b></a>, pp. 1-25, 2026.<br/> 
-                                                <a target="_blank"  href="https://openreview.net/forum?id=9y0jCrxjDR">Full Text</a></td>                  
-                                         </tr> 
-											
-
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[22]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Alternating minimization schemes for computing rate-distortion-perception functions with f-divergence perception constraints,"</i> <a target="_blank" href="https://www.itsoc.org/it-trans"><b> IEEE Transactions on Information Theory</b></a>, vol. 71, no. 11, pp. 9100-9115, 2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11145884">Full Text</a></td>                  
-                                         </tr> 
-											
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[21]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, N. Di Cicco, R. Ayassi, V. V. Garbhapu, <b>P. A. Stavrou</b>, M. Tornatore, G. Charlet, and Y. Pointurier, <i>"Experimental demonstration of local AI-agents for lifecycle management and control automation of optical networks,"</i> <a target="_blank" href="https://opg.optica.org/jocn/home.cfm"><b> Journal of Optical Communications and Networking </b></a>, vol. 17, no. 8, pp. C82-C92, 2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10977747">Full Text</a></td>               
-                                            </tr>
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[20]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin enabled multi-step strategies for autonomous power equalization in optical networks,"</i> <a target="_blank" href="https://opg.optica.org/jocn/home.cfm"><b> Journal of Optical Communications and Networking </b></a>, vol. 17, no. 7, pp. C41-C50, 2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10946004">Full Text</a></td>                
-                                            </tr> 
-										
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[19]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On the computation of the Gaussian rate-distortion-perception function,"</i> <a target="_blank" href="https://www.itsoc.org/jsait"><b> IEEE Journal on Selected Areas in Information Theory</b></a>, vol. 5, pp. 314-330, 2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10485392">Full Text</a></td>                  
-                                         </tr> 
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[18]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Indirect NRDF for partially-observable Gauss-Markov processes with MSE distortion: characterizations and optimal solutions,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b> IEEE Transactions on Automatic Control</b></a>, vol. 69, no. 9, pp. 5867 - 5882, 2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10428071">Full Text</a></td>                 
-                                         </tr> 
-										
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[17]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"The role of fidelity in goal-oriented semantic communication: a rate distortion approach,"</i> <a target="_blank" href="https://www.comsoc.org/publications/journals/ieee-tcom"><b> IEEE Transactions on Communications</b></a>, vol. 71, no. 7, pp. 3918-3931, July 2023.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10122224">Full Text</a></td>                  
-                                         </tr> 
-										
-										<tr>
-                                        <td width="25" align="left" valign="top">[16]</td>
-                                        <td align="justify" valign="top">B. A. Mouris, <b>P. A. Stavrou</b> and R. Thobaben, <i>"Optimizing low-complexity analog mappings for low-power sensors with energy scheduling capabilities,"</i> <a target="_blank" href="https://ieee-iotj.org/">
-                                        <b>IEEE Internet of Things Journal</b></a>,  vol. 9, no. 18, pp. 17387-17402, September 2022. <br/> 
-                                        <a target="_blank"  href="https://ieeexplore.ieee.org/document/9728732">Full Text</a></td>                 
-                                        </tr> 
-										
-										
-										
-										
-										
-									<tr>
-                                <td width="25" align="left" valign="top">[15]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, M. Skoglund, and T. Tanaka, <i>"Sequential source coding for stochastic systems subject to finite rate constraints,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control">
-                                <b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no. 8, pp. 3822-3835, August 2022.<br/> 
-                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/9531489">Full Text</a></td>
-                                    </tr>
-										
-										
-										     <tr>
-                                                <td width="25" align="left" valign="top">[14]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Asymptotic reverse-waterfilling algorithm of NRDF for certain classes
-												of vector Gauss-Markov processes,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control">
-                                                <b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no. 6, pp. 3196-3203, June 2022.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/9496183">Full Text</a></td>                   
-                                            </tr>
-											 
-											 
-											 <tr>
-			                            <td align="left" valign="top">[13]</td>
-                                        <td align="justify" valign="top"> S. Wang, <b>P. A. Stavrou</b>, and M. Skoglund, <i>"Generalizations of Talagrand inequality for Sinkhorn distance using entropy power inequality,"</i>  
-                                        <a target="_blank" href="https://www.mdpi.com/journal/entropy">
-			                            <b>Entropy</b></a>, Vol. 24, Issue 2, paper 306, February 2022.<br/>
-                                        <a target="_blank"  href="https://www.mdpi.com/1099-4300/24/2/306">Full Text</a>
-                                        </td>
-                                        </tr>
-											 
-											 
-											 <tr>
-                                                <td width="25" align="left" valign="top">[12]</td>
-                                                <td align="justify" valign="top">M. Barforooshan, M. Derpich, <b>P. A. Stavrou</b>, and J. &#216;stergaard, <i>"The effect of time delay on the average data rate and performance in networked control systems,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control">
-                                                <b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no.1, pp. 16-31, January 2022.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/9308939">Full Text</a></td>                
-                                            </tr>
-										
-										             <tr>
-                                                      <td width="25" align="left" valign="top">[11]</td>
-                                                      <td align="justify" valign="top"> <b>P. A. Stavrou</b> and M. Skoglund, <i>"New Formulation and Computation of NRDF for Time-Varying Multivariate Gaussian Processes with Correlated Noise,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php">
-                                                      <b>IEEE Control Systems Letters</b></a>, vol. 6, pp. 331-336,  2022.<br/> 
-													  <a target="_blank"  href="https://ieeexplore.ieee.org/document/9409165">Full Text</a></td>
-                                                      </tr>
-										
-										
-										    <tr>
-                                                <td width="25" align="left" valign="top">[10]</td>
-                                                <td align="justify" valign="top"> H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering, and M. Skoglund, <i>"Secure block source coding with sequential encoding,"</i> <a target="_blank" href="https://www.itsoc.org/publications/journal-on-selected-areas-in-information-theory-jsait">
-                                                <b>IEEE Journal on Selected Areas in Information Theory</b></a>, vol. 2, no. 1, pp. 32-48, March 2021.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/9333656">Full Text</a></td>                  
-                                            </tr>
-										
-										    <tr>
-                                                <td width="25" align="left" valign="top">[9]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, and M. Skoglund, <i>"LQG control and linear policies for noisy communication links with synchronized side information at the decoder,"</i> <a target="_blank" href="https://www.journals.elsevier.com/automatica">
-                                                <b>Automatica</b></a>, Vol. 123, 109306, January 2021.<br/> 
-                                                <a target="_blank"  href="https://www.sciencedirect.com/science/article/pii/S0005109820305057?dgcid=author">Full Text</a></td>              
-                                            </tr>
-										
-										     <tr>
-                                                <td width="25" align="left" valign="top">[8]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, J. &#216;stergaard, and M. Skoglund, <i>"Bounds on the sum-rate of MIMO causal source coding systems with memory under spatio-temporal distortion constraints,"</i> <a target="_blank" href="https://www.mdpi.com/journal/entropy">
-                                                <b>Entropy (invited for special session Multi-user Information Theory) </b></a>, Vol. 22, 0842, July 2020.<br/> 
-                                                <a target="_blank"  href="https://www.mdpi.com/1099-4300/22/8/842">Full Text</a></td>               
-                                            </tr>
-                                            
-											
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[7]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Tanaka, and S. Tatikonda, <i>"The time-invariant multidimensional Gaussian sequential rate distortion problem revisited,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control">
-                                                <b>IEEE Transactions on Automatic Control</b></a>, Vol. 65, Issue 5, pp. 2245-2249, May 2020.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/8836657">Full Text</a></td>                   
-                                            </tr>
-                                        
-                                        <tr>
-                                <td width="25" align="left" valign="top">[6]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, T. Charalambous, and C. D. Charalambous, <i>"Optimal estimation via nonanticipative rate distortion function and applications to
-                                time-varying Gauss-Markov processes,"</i> <a target="_blank" href="https://www.siam.org/Publications/Journals/SIAM-Journal-on-Control-and-Optimization-SICON">
-                                <b>SIAM Journal on Control and Optimization</b></a>, Vol. 56, Issue 5, pp. 3731-3765, 2018.<br/> 
-                                <a target="_blank"  href="https://epubs.siam.org/doi/10.1137/17M1116349">Full Text</a></td>
-                                    </tr>
-                                        
-                                        
-                                        <tr>
-                                <td width="25" align="left" valign="top">[5]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, J. &#216;stergaard, and C. D. Charalambous, <i>"Zero-delay rate distortion via filtering for vector-valued Gaussian sources,"</i> <a target="_blank" href="https://signalprocessingsociety.org/blog/ieee-jstsp-special-issue-information-theoretic-methods-data-acquisition-analysis-and-processing">
-                                <b>IEEE Journal of Selected Topics in Signal Processing </b></a>, Vol. 12, Issue 5, pp. 841-856, October 2018.<br/> 
-                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/8409938/">Full Text</a></td>
-                                    </tr>
-                                    
+                            <div class="table-mobile-wrap">
+                                <table border="0" width="100%" id="researchdescription" cellpadding="1" class="pub-table">
                                     <tr>
-                                <td width="25" align="left" valign="top">[4]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, T. Charalambous and C. D. Charalambous, <i>"Finite-time nonanticipative rate distortion function for time-varying scalar-valued Gauss-Markov sources,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php">
-                                <b>IEEE Control Systems Letters</b></a>, Vol. 2, Issue 1, pp. 175-180, January 2018.<br/> 
-                                <a target="_blank"  href="http://ieeexplore.ieee.org/document/8122065/">Full Text</a></td>
-                                    </tr>				   
-                                    <tr>
-                                <td width="25" align="left" valign="top">[3]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, C. D. Charalambous and C. K. Kourtellaris, <i>"Sequential necessary and sufficient conditions for capacity achieving distributions  of channels with memory and feedback,"</i> <a target="_blank" href="http://www.comm.utoronto.ca/trans-it/">
-                                <b>IEEE Transactions on Information Theory</b></a>, Vol. 63, Issue 11, pp. 7095-7115, November 2017.<br/> 
-                                <a target="_blank"  href="http://ieeexplore.ieee.org/document/7973025/">Full Text</a></td>
+                                        <td colspan="2" width="100%" align="center" valign="top"><b><font color="#0F5B7F"><p>List of Publications</p></font></b></td>
                                     </tr>
-                                        <tr>
-                                <td width="25" align="left" valign="top">[2]</td>
-                                <td align="justify" valign="top"> C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Directed information on abstract spaces: properties and variational equalities,"</i> <a target="_blank" href="http://www.comm.utoronto.ca/trans-it/">
-                                <b>IEEE Transactions on Information Theory</b></a>, Vol. 62, Issue 11, pp. 6019-6052, November 2016.<br/> 
-                                <a target="_blank"  href="http://ieeexplore.ieee.org/document/7557047/">Full Text</a></td>
-                                    </tr>				   
-                                        <tr>
-                                <td width="25" align="left" valign="top">[1]</td>
-                                <td align="justify" valign="top">C. D. Charalambous, <b>P. A. Stavrou</b>, and N. U. Ahmed, <i>"Nonanticipative rate distortion function and relations to filtering theory,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control">
-                                <b>IEEE Transactions on Automatic Control</b></a>, Vol. 59, Issue 4, pp. 937-952, April 2014.<br/> 
-                                <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6677606&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel7%2F9%2F4601496%2F06677606.pdf%3Farnumber%3D6677606">Full Text</a></td>
-                                    </tr>	
-                                    </table>	
-                                    <br />
+                                    <tr>
+                                        <td colspan="2">
+                                            <div id="Pubmain" style="width:100%; background-color:#f5f5f5;">
+                                                <div style="padding:0;">
 
-                                                    
-                                    <b><font color="#0F5B7F"><a href="#" onclick="openOnClick4()" name="publications" id="conferences"> Refereed Conference Papers (click)</a></font></b>
-                                        <br />
-                                        <table border="0" hidden="true" width="100%" id="conference_publications" cellpadding="1">
-										
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[63]</td>
-                                                <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>"Simplified dynamic programming for decentralized POMDPs with delayed sharing patterns via change of measure,"</i> in proceedings of <a target="_blank" href="https://ecc26.euca-ecc.org/"> <b> European Control Conference (ECC)</b></a>,  2026 (accepted).<br/> 
-                                                <!--<a target="_blank"  href="https://ieeexplore.ieee.org/document/11161637">Full Text</a>--></td>                
-                                            </tr>
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[62]</td>
-                                                <td align="justify" valign="top">M. Tang, Z. Li, M. Kountouris, and <b>P. A. Stavrou</b>, <i>"Pilot-free optimal control for linear systems over OFDM networks: A control-aided channel prediction approach,"</i> in proceedings of <a target="_blank" href="https://ecc26.euca-ecc.org/"> <b> European Control Conference (ECC)</b></a>,  2026 (accepted).<br/> 
-                                                <!--<a target="_blank"  href="https://ieeexplore.ieee.org/document/11161637">Full Text</a>--></td>                
-                                            </tr>
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[61]</td>
-                                                <td align="justify" valign="top">M. Tang, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Multi-sensor scheduling for remote state estimation over wireless MIMO fading channels with semantic over-the-air aggregation,"</i> in proceedings of <a target="_blank" href="https://icc2026.ieee-icc.org/"> <b> IEEE International Conference on Communications (ICC)</b></a>,  2026 (accepted).<br/> 
-                                                <!--<a target="_blank"  href="https://ieeexplore.ieee.org/document/11161637">Full Text</a>--></td>                
-                                            </tr>
-											
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[60]</td>
-                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Information-geometric projections and barycenters for merging variational foundation models,"</i> in proceedings of <a target="_blank" href="https://sites.google.com/view/ccfm-neurips2025"><b> NeurIPS 2025 Workshop on Continual and Compatible Foundation Model Updates (CCFM) </b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://openreview.net/forum?id=efn2tH86Gf">Full Text</a></td>               
-                                            </tr> 
-											
-                                          
-											<tr>
-                                                <td width="25" align="left" valign="top">[59]</td>
-                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Information-geometric barycenters for Bayesian federated learning,"</i> in proceedings of <a target="_blank" href="https://www.icmla-conference.org/icmla25/"><b> 24th International Conference on Machine Learning and Applications (ICMLA) </b></a>,  2025 (accepted).<br/> 
-                                                <!--<a target="_blank"  href="">Full Text</a></td>-->               
-                                            </tr> 
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[58]</td>
-                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Cost-free personalization via information-geometric projection in Bayesian federated learning,"</i> in non-archival proceedings of <a target="_blank" href="https://sites.google.com/view/clvision2025"><b> Sixth Workshop on Continual Learning in Computer Vision (CLVISION ICCV Workshop-Non Archival Track) </b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://openreview.net/forum?id=EI5tcLiquw">Full Text</a></td>               
-                                            </tr> 
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick1(); return false;" name="thesis_publications" id="thesis">Thesis (click)</a></font></b><br />
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="thesis_publications" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou,</b> <i>"Extremum Problems of Directed Information"</i>, Ph.D Thesis, University of Cyprus, 2016.<br/>
+                                                                    <a target="_blank" href="https://gnosis.library.ucy.ac.cy/bitstream/handle/7/39276/Photios%20Stavrou%20PhD.pdf?sequence=3">Ph.D Thesis</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou,</b> <i>"Investigation of wireless communication systems with diversity receivers and simulation by using a specialized software designing package called VisSim/Comm"</i>, (Dipl. Thesis), Aristotle University of Thessaloniki (AUTH), 2008.<br/>
+                                                                    <a target="_blank" href="">Diploma Thesis (in Greek)</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
 
-											
-										<tr>
-                                            <td align="left" valign="top">[57]</td>
-                                            <td align="justify" valign="top"> Z. He, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Rollout-based approximate dynamic programming for MDPs with information-theoretic constraints,"</i> in proceedings of
-                                            <a target="_blank" href="https://cdc2025.ieeecss.org/"> <b>IEEE Conference on Decision and Control (CDC)</b></a>, 2025.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/11312789">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[56]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On distributionally robust lossy source coding,"</i> in proceedings of <a target="_blank" href="https://www.ieee-itw2025.org/"><b> IEEE Information Theory Workshop (ITW)</b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11240262">Full Text</a></td>               
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[55]</td>
-                                                <td align="justify" valign="top">J. Nagar, Z. Chen, M. Kountouris, <b>P. A. Stavrou</b>,<i>"Information entropy-based scheduling for communication-efficient decentralized learning,"</i> in proceedings of <a target="_blank" href="https://2025.ieeemlsp.org/en/"><b> IEEE International Workshop on Machine Learning for Signal Processing (MLSP)</b></a>,  2025. (accepted-ranked among the top 25 submissions of the conference)<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11204341">Full Text</a></td>               
-                                            </tr>
-										
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[54]</td>
-                                                <td align="justify" valign="top">S. Vaidanis, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Optimization for semantic-aware resource allocation under CPT-based utilities,"</i> in proceedings of <a target="_blank" href="https://2025.ieeespawc.org/"><b> IEEE 26th International Workshop on Signal Processing and Artificial Intelligence for Wireless Communications (SPAWC)</b></a>,  2025. (invited paper)<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11143243">Full Text</a></td>               
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[53]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On the rate-distortion-perception function for Gaussian processes,"</i> in proceedings of <a target="_blank" href="https://2025.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11195668">Full Text</a></td>               
-                                            </tr> 
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[52]</td>
-                                            <td align="justify" valign="top"> Z. He, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"A new finite-time horizon dynamic programming analysis of nonanticipative rate-distortion function for Markov sources,"</i> in proceedings of
-                                            <a target="_blank" href="https://ecc25.euca-ecc.org/"> <b>European Control Conference (ECC)</b></a>, 2025.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/11186895">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[51]</td>
-                                                <td align="justify" valign="top">M. Tang, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"CSI-Free low-complexity remote state estimation over wireless MIMO fading channels using semantic analog aggregation,"</i> in proceedings of <a target="_blank" href="https://icc2025.ieee-icc.org/"> <b> IEEE International Conference on Communications (ICC)</b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11161637">Full Text</a></td>                
-                                            </tr>
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[50]</td>
-                                                 <td align="justify" valign="top">S. Vaidanis, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Goal-oriented semantic resource allocation with cumulative prospect theoretic agents,"</i> in proceedings of <a target="_blank" href="https://icc2025.ieee-icc.org/"><b> IEEE International Conference on Communications (ICC)</b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11161521">Full Text</a></td>               
-                                            </tr>
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[49]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled optical network channel power management by WSS and booster auto-adjustment,"</i> in proceedings of <a target="_blank" href="https://www.ofcconference.org/en-us/home/"><b> Optical Fiber Communications Conference and Exhibition (OFC)</b></a>,  2025.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/11046490">Full Text</a></td>                
-                                            </tr> 
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[48]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, N. Di Cicco, R. Ayassi, V. V. Garbhapu, <b>P. A. Stavrou</b>, M. Tornatore, G. Charlet, and Y. Pointurier, <i>"First experimental demonstration of full lifecycle automation of optical network through fine-tuned LLM and digital twin,"</i> in proceedings of <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference on Optical Communications (ECOC)</b></a>,  2024. (post-deadline paper)<br/> 
-                                                <a target="_blank"  href="https://www.eurecom.fr/publication/7882">Full Text</a></td>                 
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[47]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin enabled automatic power adjustment with multi-step lookahead prediction,"</i> in proceedings of <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference on Optical Communications (ECOC)</b></a>,  2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/abstract/document/10926422">Full Text</a></td>                
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[46]</td>
-                                                <td align="justify" valign="top">M. Sourla, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Analyzing α-divergence in Gaussian rate-distortion-perception theory,"</i> in proceedings of <a target="_blank" href="https://spawc2024.org/"><b> 25th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC)</b></a>,  2024. (invited paper)<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10694296">Full Text</a></td>                 
-                                            </tr> 
-										
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[45]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Copula-based estimation of continuous sources of a class of constrained rate-distortion functions,"</i> in proceedings of <a target="_blank" href="https://2024.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10619503">Full Text</a></td>               
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[44]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Computation of the Gaussian multivariate rate-distortion-perception function,"</i> in proceedings of <a target="_blank" href="https://2024.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10619375">Full Text</a></td>               
-                                            </tr> 
-											
-											<tr>
-                                                <td width="25" align="left" valign="top">[43]</td>
-                                                <td align="justify" valign="top">E. C. Strinati et al., <i>"Goal-oriented and semantic communication in AI-native networks: the 6G-GOALS approach,"</i> in proceedings of <a target="_blank" href="https://www.eucnc.eu/"><b> European Conference on Networks and Communications & 6G Summit (EuCNC/6G Summit)</b></a>,  2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10597087">Full Text</a></td>                 
-                                            </tr> 
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[42]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled optical network automation: power re-optimization,"</i> in proceedings of <a target="_blank" href="https://www.ofcconference.org/en-us/home/about/"><b> Optical Fiber Communications Conference and Excibition (OFC)</b></a>,  2024.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10527061">Full Text</a></td>                 
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[41]</td>
-                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled service optimization sequence of actions for power equalization,"</i> in proceedings of <a target="_blank" href="http://acpconf.com/"><b> Asia Communications and Photonics Conference/International Photonics and Optoelectronics Meetings (ACP/POEM)</b></a>,  2023. <b><font color=#DAA520>[Best Paper Award]</font></b><br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10369728">Full Text</a></td>                
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[40]</td>
-                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Computation of rate-distortion-perception function under f-divergence perception constraints,"</i> in proceedings of <a target="_blank" href="https://www.isit2023.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2023.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10206646">Full Text</a></td>                 
-                                            </tr> 
-										
-										<tr>										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[39]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, Y. Shkel and M. Kountouris, <i>"Indirect rate distortion functions with f-separable distortion criterion,"</i> in proceedings of <a target="_blank" href="https://www.isit2023.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2023.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10206789">Full Text</a></td>                  
-                                            </tr> 
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[38]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"Goal-oriented single-letter codes for lossy joint source-channel coding,"</i>in proceedings of <a target="_blank" href="https://itw2023.org/"><b> IEEE Information Theory Workshop (ITW)</b></a>, 2023.<br/> 
-                                                <a target="_blank"  href="https://ieeexplore.ieee.org/document/10160232">Full Text</a></td>                  
-                                            </tr> 
-										
-										
-										<tr>
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[37]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"A rate distortion approach to goal-oriented communication,"</i> in proceedings of <a target="_blank" href="https://www.isit2022.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2022.<br/> 
-                                                <a target="_blank"  href="https://www.techrxiv.org/articles/preprint/A_Rate_Distortion_Approach_to_Goal-Oriented_Communication/19128026">Full Text</a></td>                  
-                                            </tr> 
-										
-										
-										<tr>
-                                                <td width="25" align="left" valign="top">[36]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, S. Sar&#305;ta&#351 and M. Skoglund, <i>"Privacy signaling games with binary alphabets,"</i> in proceedings of <a target="_blank" href="https://ecc22.euca-ecc.org/"><b> European Control Conference (ECC)</b></a>,  2022.<br/> 
-                                                <a target="_blank"  href="https://arxiv.org/abs/2111.05947">Full Text</a></td>                  
-                                            </tr> 	
-										
-										<tr>
-										<td align="left" valign="top">[35]</td>
-                                        <td align="justify" valign="top"> S. Wang, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Generalized Talagrand inequality for Sinkhorn distance using entropy power inequality,</i> in proceedings of 
-                                        <a target="_blank"> <b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
-                                        <a target="_blank"  href="https://ieeexplore.ieee.org/document/9611464">Full Text</a>
-                                        </td>
-                                        </tr>
-										
-										
-										<tr>
-										<td align="left" valign="top">[34]</td>
-                                        <td align="justify" valign="top"> H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering and M. Skoglund, <i>Secure source coding with side-information at decoder and shared key at encoder and decoder,</i> in proceedings of 
-                                        <a target="_blank"> <b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
-                                        <a target="_blank"  href="https://ieeexplore.ieee.org/document/9611508">Full Text</a>
-                                        </td>
-                                        </tr>
-										
-										
-										<tr>
-										<td align="left" valign="top">[33]</td>
-                                        <td align="justify" valign="top"> M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Adaptive interference coordination over channels with unknown state at the encoder and the decoder,</i> in proceedings of 
-                                        <a target="_blank"> <b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
-                                        <a target="_blank"  href="https://ieeexplore.ieee.org/document/9611468">Full Text</a>
-                                        </td>
-                                        </tr>
-										
-										
-										<tr>
-										<td width="25" align="left" valign="top">[32]</td>
-                                        <td align="justify" valign="top"> <b>P. A. Stavrou</b> and M. Skoglund, <i>"New Formulation and Computation of NRDF for Time-Varying Multivariate Gaussian Processes with Correlated Noise,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php">
-                                        <b>IEEE Conference on Decision and Control (CDC)</b></a>, 2021.<br/> 
-										<a target="_blank"  href="https://ieeexplore.ieee.org/document/9409165">Full Text</a></td>
-                                        </tr>
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[31]</td>
-                                            <td align="justify" valign="top"> S. Sar&#305;ta&#351, <b>P. A. Stavrou</b>, R. Thobaben, and M. Skoglund, <i>Quadratic signaling games with channel combining ratio,</i> in proceedings of
-                                            <a target="_blank"> <b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2021.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9518039">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[30]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b>, and M. Skoglund, <i> New formulation of NRDF to compute partially-observed Gaussian processes with MSE distortion,</i> in proceedings of
-                                            <a target="_blank"> <b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2021.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9518199">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[29]</td>
-                                            <td align="justify" valign="top"> B. Cavarec, <b>P. A. Stavrou</b>, M. Bengtsson and M. Skoglund, <i>Designing privacy filters for hidden Markov processes,</i> in proceedings of
-                                            <a target="_blank"> <b>European Control Conference (ECC) (invited)</b></a>, 2021.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9654982">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[28]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b>, and M. Skoglund, <i>Nonasymptotic bounds using causal source coding  on scalar-valued Gauss-Markov sources with MSE Distortion and causal side information,</i> in proceedings of
-                                            <a target="_blank"> <b>Asilomar conference on signals, systems and computers</b></a>, 2020.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9443303">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										<tr>
-                                            <td align="left" valign="top">[27]</td>
-                                            <td align="justify" valign="top"> M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Remote empirical coordination,</i> in proceedings of 
-                                            <a target="_blank"> <b>International Symposium on Information Theory and Applications (ISITA)</b></a>, 2020.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9366135">Full Text</a>
-                                            </td>
-                                            </tr>
-										
-										
-										<tr>
-                                            <td align="left" valign="top">[26]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b>, and M. Skoglund, <i>Computation and system identification of a lower bound on scalar LQG control via a noisy communication link with delayed CaSI at the decoder,</i> in proceedings of 
-                                            <a target="_blank"> <b>European Control Conference (ECC)</b></a>, 2020.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/9143640">Full Text</a>
-                                            </td>
-                                            </tr>	
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[25]</td>
-                                            <td align="justify" valign="top"> M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Empirical coordination with multiple descriptions,</i> in proceedings of 
-                                            <a target="_blank"> <b>57th Annual Allerton Conference on Communication, Control, and Computing</b></a>, 2019.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8919668">Full Text</a>
-                                            </td>
-                                            </tr>	
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[24]</td>
-                                            <td align="justify" valign="top">H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering, and M. Skoglund, <i>Block source coding with sequential encoding,</i> in proceedings of 
-                                            <a target="_blank"> <b>IEEE Information Theory Workshop (ITW)</b></a>, 2019.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8989296">Full Text</a>
-                                            </td>
-                                            </tr>
-                                            
-                                        <tr>
-                                            <td align="left" valign="top">[23]</td>
-                                            <td align="justify" valign="top"> M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Empirical coordination subject to a fidelity criterion,</i> in proceedings of 
-                                            <a target="_blank"> <b>IEEE Information Theory Workshop (ITW)</b></a>, 2019.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8989218">Full Text</a>
-                                            </td>
-                                            </tr>	
-                                        
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[22]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous, C. D. Charalambous, S. Loyka, and M. Skoglund, <i>Asymptotic reverse-waterfilling solution of
-                                        nonanticipative rate distortion function for vector-valued Gauss-Markov sources with MSE distortion,</i> in proceedings of 
-                                            <a target="_blank"> <b>IEEE 57th Conference on Decision and Control (CDC)</b></a>, 2018.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8619725">Full Text</a>
-                                            </td>
-                                            </tr> 
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[21]</td>
-                                            <td align="justify" valign="top"> C. D. Charalambous, <b>P. A. Stavrou</b>, C. K. Kourtellaris, and I. Tzortzis, <i>&quot;Directed Information subject to a fidelity:
-                                            applications to conditionally Gaussian processes,&quot;</i> in proceedings of <a target="_blank"> <b>European Control Conference (ECC)</b></a>, 2018.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8550054">Full Text</a>
-                                            </tr>
-                                        
-                                        
-                                            <tr>
-                                            <td align="left" valign="top">[20]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b>, J. &#216;stergaard, and M. Skoglund, <i>&quot;On zero-delay source coding of LTI Gauss-Markov
-                                            systems with covariance matrix distortion constraints,&quot;</i> in proceedings of <a target="_blank"> <b>European Control Conference (ECC)</b></a>, 2018.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8550204">Full Text</a>
-                                            </tr>
-                                        
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[19]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b> and J. &#216;stergaard, <i>&quot;Fixed-rate zero-delay source coding for stationary vector-valued Gauss-Markov sources,&quot;</i> in proceedings of <a target="_blank"> <b>Data Compression Conference (DCC)</b></a>, 2018.<br/>
-                                            <a target="_blank"  href="https://ieeexplore.ieee.org/document/8416598/">Full Text</a>
-                                            </tr>
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[18]</td>
-                                            <td align="justify" valign="top"> <b>P. A. Stavrou</b>, J. &#216;stergaard, C. D. Charalambous, and M. Derpich, <i>&quot;An upper bound to zero-delay rate distortion via Kalman filtering for Vector Gaussian
-                                            sources,&quot;</i> in proceedings of <a target="_blank" > <b>IEEE Information Theory Workshop (ITW)</b></a>, 2017.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/document/8277966/">Full Text</a>
-                                            </tr> 
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[17]</td>
-                                            <td align="justify" valign="top"> M. Barforooshan, J. &#216;stergaard, and <b>P. A. Stavrou</b>, <i>&quot;Achievable performance of zero-delay variable-rate coding in rate constrained networked control systems with channel delay,&quot;</i> in proceedings of 
-                                            <a target="_blank"> <b>IEEE Conference on Decision and Control (CDC)</b></a>, 2017.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/document/8264566/">Full Text</a>
-                                            </tr> 
-                                        
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[16]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b> and J. &#216;stergaard, <i>&quot;A lower bound on causal and zero-delay rate distortion for scalar Gaussian autoregressive sources,&quot;</i> in proceedings of 
-                                            <a target="_blank" > <b>International Symposium on Information Theory and Signal Processing in Benelux (SITB)</b></a>, 2017.<br/>
-                                            <a target="_blank"  href="http://cas.tudelft.nl/sitb2017/sitb2017proceedings.pdf">Full Text</a></td>
-                                            </tr> 
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[15]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous, and C. D. Charalambous, <i>&quot;Filtering with fidelity for time-varying Gauss-Markov processes,&quot;</i> in proceedings of 
-                                            <a target="_blank"> <b>IEEE 55th Conference on Decision and Control (CDC)</b></a>, 2016.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/document/7799108/">Full Text</a></td>
-                                            </tr> 
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[14]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. D. Charalambous, and C. K. Kourtellaris, <i>&quot;Sequential necessary and sufficient conditions for optimal channel input 
-                                                distributions of channels with memory and feedback,&quot;</i> in proceedings of
-                                            <a target="_blank"> <b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2016.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7541309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D7541309"> Full Text</a></td>
-                                            </tr> 
-                                        
-                                        
-                                        
-                                        <tr>
-                                        
-                                        <td align="left" valign="top">[13]</td>
-                                            <td align="justify" valign="top">C. K. Kourtellaris, C. D. Charalambous, J. Boutros, and <b>P. A. Stavrou</b>,  <i>&quot;Optimal communication
-                    for sources and channels with memory and delay-sensitive applications,&quot;</i> in
-                                            proceedings of <a target="_blank"> <b>Qatar Foundation
-                                            Annual Research Conference (ARC)</b></a>, 2014  (abstract only).<br/>
-                                            <a target="_blank"  href="http://www.qscience.com/doi/pdf/10.5339/qfarc.2014.ITPP0820">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                        
-                                        <td align="left" valign="top">[12]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. K. Kourtellaris, and C. D. Charalambous, <i>&quot;Applications of information nonanticipative rate distortion function,&quot;</i> in
-                                            proceedings of <a target="_blank" ><b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2014.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6875397&newsearch=true&queryText=Applications%20of%20information%20nonanticipative">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[11]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Optimization of directed information and relations to filtering theory,&quot;</i> 
-                                            in proceedings of<a target="_blank" ><b> 13th European Control Conference (ECC)</b></a>, 2014.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6862534&searchWithin%3Dp_Authors%3A.QT.Stavrou%2C+P.%2FA%2F..QT.">Full Text</a></td>
-                                            </tr>
-                                            <tr>
-                                        <td align="left" valign="top">[10]</td>
-                                        <td align="justify" valign="top"><b>P. A. Stavrou</b> and C. D. Charalambous, <i>&quot;Variational equalities of directed information and applications &quot;</i> 
-                                            in proceedings of <a target="_blank" ><b> IEEE International Symposium on Information Theory (ISIT)</b></a>, 2013.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6620692&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6620692">Full Text</a></td>
-                                        </tr>				
-                                        <tr>
-                                            <td align="left" valign="top">[9]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;On the relation of nonanticipative rate distortion function and filtering theory,&quot;</i> 
-                                            in proceedings of <a target="_blank" ><b> 12th Biannual European Control Conference (ECC)</b></a>, 2013.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6669138&queryText%3Don+the+relation+of+nonanticipative">Full Text</a></td>
-                                            </tr>				
-                                        
-                                        <tr>
-                                            <td align="left" valign="top">[8]</td>
-                                            <td align="justify" valign="top"><b>P. A. Stavrou</b> and C. D. Charalambous, <i>&quot;Causal rate distortion function and relations to filtering theory,&quot;</i> in proceedings of <a target="_blank">
-                                <b>20th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2012. (Extended Abstract)<br/>
-                                            <a target="_blank"  href="http://www.mtns2012.conference.net.au/Extended%20Abstract/MTNS2012_0148_paper.pdf">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[7]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Directed information on abstract Alphabets: properties and extremum problems,&quot;</i> 
-                                            in proceedings of <a target="_blank">
-                                <b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2012.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6284243&queryText%3DDIRECTED+INFORMATION+ON+ABSTRACT">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[6]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. A. Stavrou</b>, <i>&quot;Rate distortion function with causal decoding,&quot;</i> in proceedings of 
-                                            <a target="_blank">
-                                            <b>49th IEEE Conference on Decision and Control (CDC)</b></a>, 2010.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5717369&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F5707200%2F5716927%2F05717369.pdf%3Farnumber%3D5717369">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[5]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;On the optimal reconstruction kernel of causal rate distortion function,&quot;</i> in proceedings of 
-                                            <a target="_blank" >
-                                <b>19th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2010. (Invited Paper)<br/>
-                                            <a target="_blank"  href="http://www.conferences.hu/mtns2010/proceedings/Papers/214_305.pdf">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[4]</td>
-                                            <td align="justify" valign="top">F. Rezaei, C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Rate distortion function for a class of relative entropy sources,&quot;</i> in proceedings of 
-                                            <a target="_blank" >
-                                <b>19th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2010.<br/>
-                                            <a target="_blank"  href="http://www.conferences.hu/mtns2010/proceedings/Papers/329_205.pdf">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[3]</td>
-                                            <td align="justify" valign="top">F. Rezaei, C. D. Charalambous, <b>P. A. Stavrou</b> and C. K. Kourtellaris, <i>&quot;Minimax rate distortion for a class of sources,&quot;</i> in proceedings of
-                                            <a target="_blank">
-                                <b>4th IEEE International Symposium on Communications, Control and Signal Processing (ISCCSP)</b></a>, 2010. (Invited Paper)<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5463428">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[2]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;Stochastic control over finite capacity channels: 
-                                            causality, feedback and uncertainty,&quot;</i> in proceedings of 
-                                            <a target="_blank">
-                                <b>48th IEEE Conference on Decision and Control and 28th Chinese Control Conference(CDC-CCC)</b></a>, 2009.<br/>
-                                            <a target="_blank"  href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=5400824&queryText%3Dstochastic+control+over+finite+capacity+channels">Full Text</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" valign="top">[1]</td>
-                                            <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;Stochastic control over finite capacity channels: 
-                                            causality and feedback,&quot;</i> in proceedings of 
-                                            <a target="_blank" >
-                                <b>European Control Conference (ECC)</b></a>, 2009.<br/>
-                                            <a target="_blank"  href="http://www.academia.edu/3305874/Stochastic_control_over_finite_capacity_channels_Causality_and_feedback">Full Text</a></td>
-                                        </tr>
-                                        </table>
-                                        <br/>
-										
-										<b><font color="#0F5B7F"><a href="#" onclick="openOnClick5()" name="preprint_publications" id="preprints">Preprints (click)</a></font></b><br/>
-                                        <table border="0"  hidden="true" width="100%" id="preprint_publications" cellpadding="1">
-										
-										<tr>
-										<td align="left" valign="top">[2]</td>
-                                        <td align="justify" valign="top"> <b>P. A. Stavrou</b> and M. Kountouris, <i>A rate distortion approach to goal-oriented communication,<i>  
-                                        <a target="_blank" href=""></a> 2022.<br/>
-                                        <!--<a target="_blank"  href="">Full Text</a>-->
-                                        </td>
-                                        </tr>
-										
-										
-										
-											
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick2(); return false;" name="book_chapters_publications" id="book_chapters">Book Chapters (click)</a></font></b><br />
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="book_chapters_publications" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[4]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris, and <b>P. A. Stavrou</b>, <i>"On Shannon's duality of a source and a channel and nonanticipative communication and communication for control,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2"><b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 291-305, November 2014</a>.<br/>
+                                                                    <a target="_blank" href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_35">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[3]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, <b>P. A. Stavrou</b>, and C. K. Kourtellaris, <i>"Directed information on abstract spaces: Properties and extremum Problems,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2"><b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 307-315, November 2014</a>.<br/>
+                                                                    <a target="_blank" href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_36">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. K. Kourtellaris, and C. D. Charalambous, <i>"Information nonanticipative rate distortion function and its applications,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2"><b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 317-324, November 2014</a>.<br/>
+                                                                    <a target="_blank" href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_37">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top">C. K. Kourtellaris, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Nonanticipative duality of sources and channels with memory and feedback,"</i> <a target="_blank" href="http://link.springer.com/book/10.1007/978-3-319-10407-2"><b>Coordination Control of Distributed Systems (Edt. by Jan Van Schuppen and Tiziano Villa) in ser. Lecture Notes in Control and Information Sciences</b>, Vol. 456, pp. 325-335, November 2014</a>.<br/>
+                                                                    <a target="_blank" href="http://link.springer.com/chapter/10.1007%2F978-3-319-10407-2_38">Full Text</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
 
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick3(); return false;" name="journal_publications" id="journals">Journals (click)</a></font></b><br/>
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="journal_publications" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[23]</td>
+                                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Cost-free personalization via information-geometric projection in Bayesian federated learning,"</i> <a target="_blank" href="https://jmlr.org/tmlr/"><b> Transactions on Machine Learning Research (TMRL)</b></a>, pp. 1-25, 2026.<br/>
+                                                                    <a target="_blank" href="https://openreview.net/forum?id=9y0jCrxjDR">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[22]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Alternating minimization schemes for computing rate-distortion-perception functions with f-divergence perception constraints,"</i> <a target="_blank" href="https://www.itsoc.org/it-trans"><b> IEEE Transactions on Information Theory</b></a>, vol. 71, no. 11, pp. 9100-9115, 2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11145884">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[21]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, N. Di Cicco, R. Ayassi, V. V. Garbhapu, <b>P. A. Stavrou</b>, M. Tornatore, G. Charlet, and Y. Pointurier, <i>"Experimental demonstration of local AI-agents for lifecycle management and control automation of optical networks,"</i> <a target="_blank" href="https://opg.optica.org/jocn/home.cfm"><b> Journal of Optical Communications and Networking </b></a>, vol. 17, no. 8, pp. C82-C92, 2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10977747">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[20]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin enabled multi-step strategies for autonomous power equalization in optical networks,"</i> <a target="_blank" href="https://opg.optica.org/jocn/home.cfm"><b> Journal of Optical Communications and Networking </b></a>, vol. 17, no. 7, pp. C41-C50, 2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10946004">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[19]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On the computation of the Gaussian rate-distortion-perception function,"</i> <a target="_blank" href="https://www.itsoc.org/jsait"><b> IEEE Journal on Selected Areas in Information Theory</b></a>, vol. 5, pp. 314-330, 2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10485392">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[18]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Indirect NRDF for partially-observable Gauss-Markov processes with MSE distortion: characterizations and optimal solutions,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b> IEEE Transactions on Automatic Control</b></a>, vol. 69, no. 9, pp. 5867 - 5882, 2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10428071">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[17]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"The role of fidelity in goal-oriented semantic communication: a rate distortion approach,"</i> <a target="_blank" href="https://www.comsoc.org/publications/journals/ieee-tcom"><b> IEEE Transactions on Communications</b></a>, vol. 71, no. 7, pp. 3918-3931, July 2023.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10122224">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[16]</td>
+                                                                <td align="justify" valign="top">B. A. Mouris, <b>P. A. Stavrou</b> and R. Thobaben, <i>"Optimizing low-complexity analog mappings for low-power sensors with energy scheduling capabilities,"</i> <a target="_blank" href="https://ieee-iotj.org/"><b>IEEE Internet of Things Journal</b></a>, vol. 9, no. 18, pp. 17387-17402, September 2022.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9728732">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[15]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, M. Skoglund, and T. Tanaka, <i>"Sequential source coding for stochastic systems subject to finite rate constraints,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no. 8, pp. 3822-3835, August 2022.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9531489">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[14]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Asymptotic reverse-waterfilling algorithm of NRDF for certain classes of vector Gauss-Markov processes,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no. 6, pp. 3196-3203, June 2022.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9496183">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[13]</td>
+                                                                <td align="justify" valign="top">S. Wang, <b>P. A. Stavrou</b>, and M. Skoglund, <i>"Generalizations of Talagrand inequality for Sinkhorn distance using entropy power inequality,"</i> <a target="_blank" href="https://www.mdpi.com/journal/entropy"><b>Entropy</b></a>, Vol. 24, Issue 2, paper 306, February 2022.<br/>
+                                                                    <a target="_blank" href="https://www.mdpi.com/1099-4300/24/2/306">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[12]</td>
+                                                                <td align="justify" valign="top">M. Barforooshan, M. Derpich, <b>P. A. Stavrou</b>, and J. &#216;stergaard, <i>"The effect of time delay on the average data rate and performance in networked control systems,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b>IEEE Transactions on Automatic Control</b></a>, vol. 67, no.1, pp. 16-31, January 2022.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9308939">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[11]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"New Formulation and Computation of NRDF for Time-Varying Multivariate Gaussian Processes with Correlated Noise,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php"><b>IEEE Control Systems Letters</b></a>, vol. 6, pp. 331-336, 2022.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9409165">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[10]</td>
+                                                                <td align="justify" valign="top">H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering, and M. Skoglund, <i>"Secure block source coding with sequential encoding,"</i> <a target="_blank" href="https://www.itsoc.org/publications/journal-on-selected-areas-in-information-theory-jsait"><b>IEEE Journal on Selected Areas in Information Theory</b></a>, vol. 2, no. 1, pp. 32-48, March 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9333656">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[9]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, and M. Skoglund, <i>"LQG control and linear policies for noisy communication links with synchronized side information at the decoder,"</i> <a target="_blank" href="https://www.journals.elsevier.com/automatica"><b>Automatica</b></a>, Vol. 123, 109306, January 2021.<br/>
+                                                                    <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0005109820305057?dgcid=author">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[8]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, J. &#216;stergaard, and M. Skoglund, <i>"Bounds on the sum-rate of MIMO causal source coding systems with memory under spatio-temporal distortion constraints,"</i> <a target="_blank" href="https://www.mdpi.com/journal/entropy"><b>Entropy (invited for special session Multi-user Information Theory) </b></a>, Vol. 22, 0842, July 2020.<br/>
+                                                                    <a target="_blank" href="https://www.mdpi.com/1099-4300/22/8/842">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[7]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Tanaka, and S. Tatikonda, <i>"The time-invariant multidimensional Gaussian sequential rate distortion problem revisited,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b>IEEE Transactions on Automatic Control</b></a>, Vol. 65, Issue 5, pp. 2245-2249, May 2020.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8836657">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[6]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous, and C. D. Charalambous, <i>"Optimal estimation via nonanticipative rate distortion function and applications to time-varying Gauss-Markov processes,"</i> <a target="_blank" href="https://www.siam.org/Publications/Journals/SIAM-Journal-on-Control-and-Optimization-SICON"><b>SIAM Journal on Control and Optimization</b></a>, Vol. 56, Issue 5, pp. 3731-3765, 2018.<br/>
+                                                                    <a target="_blank" href="https://epubs.siam.org/doi/10.1137/17M1116349">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[5]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, J. &#216;stergaard, and C. D. Charalambous, <i>"Zero-delay rate distortion via filtering for vector-valued Gaussian sources,"</i> <a target="_blank" href="https://signalprocessingsociety.org/blog/ieee-jstsp-special-issue-information-theoretic-methods-data-acquisition-analysis-and-processing"><b>IEEE Journal of Selected Topics in Signal Processing </b></a>, Vol. 12, Issue 5, pp. 841-856, October 2018.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8409938/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[4]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous and C. D. Charalambous, <i>"Finite-time nonanticipative rate distortion function for time-varying scalar-valued Gauss-Markov sources,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php"><b>IEEE Control Systems Letters</b></a>, Vol. 2, Issue 1, pp. 175-180, January 2018.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/8122065/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[3]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. D. Charalambous and C. K. Kourtellaris, <i>"Sequential necessary and sufficient conditions for capacity achieving distributions  of channels with memory and feedback,"</i> <a target="_blank" href="http://www.comm.utoronto.ca/trans-it/"><b>IEEE Transactions on Information Theory</b></a>, Vol. 63, Issue 11, pp. 7095-7115, November 2017.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/7973025/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Directed information on abstract spaces: properties and variational equalities,"</i> <a target="_blank" href="http://www.comm.utoronto.ca/trans-it/"><b>IEEE Transactions on Information Theory</b></a>, Vol. 62, Issue 11, pp. 6019-6052, November 2016.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/7557047/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, <b>P. A. Stavrou</b>, and N. U. Ahmed, <i>"Nonanticipative rate distortion function and relations to filtering theory,"</i> <a target="_blank" href="http://ieeecss.org/publication/transactions-automatic-control"><b>IEEE Transactions on Automatic Control</b></a>, Vol. 59, Issue 4, pp. 937-952, April 2014.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6677606&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel7%2F9%2F4601496%2F06677606.pdf%3Farnumber%3D6677606">Full Text</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
 
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[1]</td>
-                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Indirect NRDF for partially observable Gauss-Markov processes with MSE distortion: complete characterizations and optimal solutions,"</i> <a target="_blank" href=""></a>
-                                                <b></b> 2021</a>.<br/> 
-                                                <a target="_blank"  href="https://arxiv.org/abs/1912.07640v4">Full Text</a></td>                   
-                                            </tr>
-											
-										
-									</table>
-                                        <br />
-                                    										
-								 <b><font color="#0F5B7F"><a href="#" onclick="openOnClick6()" name="technical_reports" id="technical">Technical Reports (click)</a></font></b><br/>
-                                        <table border="0"  hidden="true" width="100%" id="technical_reports" cellpadding="1">
-								<tr>
-                                <td width="25" align="left" valign="top">[2]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b> and M. Skoglund, <i>"The zero-delay RDF for Gaussian processes with encoder-decoder causal side information,"</i> 2019.<br/> 
-                                <a target="_blank"  href="http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1306744&dswid=5430">Full Text</a></td>
-                                </tr>
-										
-								<tr>
-                                <td width="25" align="left" valign="top">[1]</td>
-                                <td align="justify" valign="top"> <b>P. A. Stavrou</b>, C. K. Kourtellaris and C. D. Charalambous, <i>"Information Nonanticipative RDF and its applications,"</i> 2014.<br/> 
-                                <a target="_blank"  href="https://arxiv.org/abs/1405.1593">Full Text</a></td>
-                                </tr>
-								</table>
-                                <br />
-								
-								
-								<b><font color="#0F5B7F"><a href="#" onclick="openOnClick7()" name="Demos" id="demos">Demos/Exhibitions (click)</a></font></b><br />
-                                        <table border="0"  hidden="true" width="100%" id="Demos" cellpadding="1">
-                                            
-                                            <tr>
-                                                <td width="25" align="left" valign="top">[1]</td>
-                                                <td align="justify" valign="top"> C. Sun, R. Ayassi, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Demonstration of LLM-based AI-Agent for Optical Network Management and Automation,"</i> <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference and Exhibition on Optical Communications (ECOC)</b></a>,  2024.</a>.<br/> 
-                                                <a target="_blank"  href="https://express.converia.de/frontend/index.php?page_id=34825&v=List&do=15&day=5106&ses=32619#">Brief Explanation</a></td>
-                                            </tr>				   
-                                        </table>	
-                                        <br/>
-                                
-								</div>
-                                </div></td>
-                                <script type="text/javascript">
-                                //Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )
-                                var collapsePubmain=new animatedcollapse("Pubmain", 800, true)
-                                </script><!--</td>-->
-								<!--</tr>-->
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick4(); return false;" name="publications" id="conferences">Refereed Conference Papers (click)</a></font></b><br />
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="conference_publications" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[63]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>"Simplified dynamic programming for decentralized POMDPs with delayed sharing patterns via change of measure,"</i> in proceedings of <a target="_blank" href="https://ecc26.euca-ecc.org/"> <b> European Control Conference (ECC)</b></a>,  2026 (accepted).</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[62]</td>
+                                                                <td align="justify" valign="top">M. Tang, Z. Li, M. Kountouris, and <b>P. A. Stavrou</b>, <i>"Pilot-free optimal control for linear systems over OFDM networks: A control-aided channel prediction approach,"</i> in proceedings of <a target="_blank" href="https://ecc26.euca-ecc.org/"> <b> European Control Conference (ECC)</b></a>,  2026 (accepted).</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[61]</td>
+                                                                <td align="justify" valign="top">M. Tang, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Multi-sensor scheduling for remote state estimation over wireless MIMO fading channels with semantic over-the-air aggregation,"</i> in proceedings of <a target="_blank" href="https://icc2026.ieee-icc.org/"> <b> IEEE International Conference on Communications (ICC)</b></a>,  2026 (accepted).</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[60]</td>
+                                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Information-geometric projections and barycenters for merging variational foundation models,"</i> in proceedings of <a target="_blank" href="https://sites.google.com/view/ccfm-neurips2025"><b> NeurIPS 2025 Workshop on Continual and Compatible Foundation Model Updates (CCFM) </b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://openreview.net/forum?id=efn2tH86Gf">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[59]</td>
+                                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Information-geometric barycenters for Bayesian federated learning,"</i> in proceedings of <a target="_blank" href="https://www.icmla-conference.org/icmla25/"><b> 24th International Conference on Machine Learning and Applications (ICMLA) </b></a>,  2025 (accepted).</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[58]</td>
+                                                                <td align="justify" valign="top">N. Jamoussi, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Cost-free personalization via information-geometric projection in Bayesian federated learning,"</i> in non-archival proceedings of <a target="_blank" href="https://sites.google.com/view/clvision2025"><b> Sixth Workshop on Continual Learning in Computer Vision (CLVISION ICCV Workshop-Non Archival Track) </b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://openreview.net/forum?id=EI5tcLiquw">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[57]</td>
+                                                                <td align="justify" valign="top">Z. He, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"Rollout-based approximate dynamic programming for MDPs with information-theoretic constraints,"</i> in proceedings of
+                                                                    <a target="_blank" href="https://cdc2025.ieeecss.org/"> <b>IEEE Conference on Decision and Control (CDC)</b></a>, 2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11312789">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[56]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On distributionally robust lossy source coding,"</i> in proceedings of <a target="_blank" href="https://www.ieee-itw2025.org/"><b> IEEE Information Theory Workshop (ITW)</b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11240262">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[55]</td>
+                                                                <td align="justify" valign="top">J. Nagar, Z. Chen, M. Kountouris, <b>P. A. Stavrou</b>,<i>"Information entropy-based scheduling for communication-efficient decentralized learning,"</i> in proceedings of <a target="_blank" href="https://2025.ieeemlsp.org/en/"><b> IEEE International Workshop on Machine Learning for Signal Processing (MLSP)</b></a>,  2025. (accepted-ranked among the top 25 submissions of the conference)<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11204341">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[54]</td>
+                                                                <td align="justify" valign="top">S. Vaidanis, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Optimization for semantic-aware resource allocation under CPT-based utilities,"</i> in proceedings of <a target="_blank" href="https://2025.ieeespawc.org/"><b> IEEE 26th International Workshop on Signal Processing and Artificial Intelligence for Wireless Communications (SPAWC)</b></a>,  2025. (invited paper)<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11143243">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[53]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"On the rate-distortion-perception function for Gaussian processes,"</i> in proceedings of <a target="_blank" href="https://2025.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11195668">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[52]</td>
+                                                                <td align="justify" valign="top">Z. He, C. D. Charalambous, and <b>P. A. Stavrou</b>, <i>"A new finite-time horizon dynamic programming analysis of nonanticipative rate-distortion function for Markov sources,"</i> in proceedings of
+                                                                    <a target="_blank" href="https://ecc25.euca-ecc.org/"> <b>European Control Conference (ECC)</b></a>, 2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11186895">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[51]</td>
+                                                                <td align="justify" valign="top">M. Tang, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"CSI-Free low-complexity remote state estimation over wireless MIMO fading channels using semantic analog aggregation,"</i> in proceedings of <a target="_blank" href="https://icc2025.ieee-icc.org/"> <b> IEEE International Conference on Communications (ICC)</b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11161637">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[50]</td>
+                                                                <td align="justify" valign="top">S. Vaidanis, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Goal-oriented semantic resource allocation with cumulative prospect theoretic agents,"</i> in proceedings of <a target="_blank" href="https://icc2025.ieee-icc.org/"><b> IEEE International Conference on Communications (ICC)</b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11161521">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[49]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled optical network channel power management by WSS and booster auto-adjustment,"</i> in proceedings of <a target="_blank" href="https://www.ofcconference.org/en-us/home/"><b> Optical Fiber Communications Conference and Exhibition (OFC)</b></a>,  2025.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11046490">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[48]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, N. Di Cicco, R. Ayassi, V. V. Garbhapu, <b>P. A. Stavrou</b>, M. Tornatore, G. Charlet, and Y. Pointurier, <i>"First experimental demonstration of full lifecycle automation of optical network through fine-tuned LLM and digital twin,"</i> in proceedings of <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference on Optical Communications (ECOC)</b></a>,  2024. (post-deadline paper)<br/>
+                                                                    <a target="_blank" href="https://www.eurecom.fr/publication/7882">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[47]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin enabled automatic power adjustment with multi-step lookahead prediction,"</i> in proceedings of <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference on Optical Communications (ECOC)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/10926422">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[46]</td>
+                                                                <td align="justify" valign="top">M. Sourla, G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Analyzing α-divergence in Gaussian rate-distortion-perception theory,"</i> in proceedings of <a target="_blank" href="https://spawc2024.org/"><b> 25th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC)</b></a>,  2024. (invited paper)<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10694296">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[45]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Copula-based estimation of continuous sources of a class of constrained rate-distortion functions,"</i> in proceedings of <a target="_blank" href="https://2024.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10619503">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[44]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Computation of the Gaussian multivariate rate-distortion-perception function,"</i> in proceedings of <a target="_blank" href="https://2024.ieee-isit.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10619375">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[43]</td>
+                                                                <td align="justify" valign="top">E. C. Strinati et al., <i>"Goal-oriented and semantic communication in AI-native networks: the 6G-GOALS approach,"</i> in proceedings of <a target="_blank" href="https://www.eucnc.eu/"><b> European Conference on Networks and Communications & 6G Summit (EuCNC/6G Summit)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10597087">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[42]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled optical network automation: power re-optimization,"</i> in proceedings of <a target="_blank" href="https://www.ofcconference.org/en-us/home/about/"><b> Optical Fiber Communications Conference and Excibition (OFC)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10527061">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[41]</td>
+                                                                <td align="justify" valign="top">C. Sun, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Digital twin-enabled service optimization sequence of actions for power equalization,"</i> in proceedings of <a target="_blank" href="http://acpconf.com/"><b> Asia Communications and Photonics Conference/International Photonics and Optoelectronics Meetings (ACP/POEM)</b></a>,  2023. <b><font color="#DAA520">[Best Paper Award]</font></b><br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10369728">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[40]</td>
+                                                                <td align="justify" valign="top">G. Serra, <b>P. A. Stavrou</b>, and M. Kountouris, <i>"Computation of rate-distortion-perception function under f-divergence perception constraints,"</i> in proceedings of <a target="_blank" href="https://www.isit2023.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2023.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10206646">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[39]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, Y. Shkel and M. Kountouris, <i>"Indirect rate distortion functions with f-separable distortion criterion,"</i> in proceedings of <a target="_blank" href="https://www.isit2023.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2023.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10206789">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[38]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"Goal-oriented single-letter codes for lossy joint source-channel coding,"</i>in proceedings of <a target="_blank" href="https://itw2023.org/"><b> IEEE Information Theory Workshop (ITW)</b></a>, 2023.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/10160232">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[37]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>"A rate distortion approach to goal-oriented communication,"</i> in proceedings of <a target="_blank" href="https://www.isit2022.org/"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>,  2022.<br/>
+                                                                    <a target="_blank" href="https://www.techrxiv.org/articles/preprint/A_Rate_Distortion_Approach_to_Goal-Oriented_Communication/19128026">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[36]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, S. Sar&#305;ta&#351 and M. Skoglund, <i>"Privacy signaling games with binary alphabets,"</i> in proceedings of <a target="_blank" href="https://ecc22.euca-ecc.org/"><b> European Control Conference (ECC)</b></a>,  2022.<br/>
+                                                                    <a target="_blank" href="https://arxiv.org/abs/2111.05947">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[35]</td>
+                                                                <td align="justify" valign="top">S. Wang, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Generalized Talagrand inequality for Sinkhorn distance using entropy power inequality,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9611464">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[34]</td>
+                                                                <td align="justify" valign="top">H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering and M. Skoglund, <i>Secure source coding with side-information at decoder and shared key at encoder and decoder,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9611508">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[33]</td>
+                                                                <td align="justify" valign="top">M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Adaptive interference coordination over channels with unknown state at the encoder and the decoder,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9611468">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[32]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"New Formulation and Computation of NRDF for Time-Varying Multivariate Gaussian Processes with Correlated Noise,"</i> <a target="_blank" href="http://ieee-cssletters.dei.unipd.it/index.php">
+                                                                    <b>IEEE Conference on Decision and Control (CDC)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9409165">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[31]</td>
+                                                                <td align="justify" valign="top">S. Sar&#305;ta&#351, <b>P. A. Stavrou</b>, R. Thobaben, and M. Skoglund, <i>Quadratic signaling games with channel combining ratio,</i> in proceedings of
+                                                                    <a target="_blank"><b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9518039">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[30]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, and M. Skoglund, <i> New formulation of NRDF to compute partially-observed Gaussian processes with MSE distortion,</i> in proceedings of
+                                                                    <a target="_blank"><b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9518199">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[29]</td>
+                                                                <td align="justify" valign="top">B. Cavarec, <b>P. A. Stavrou</b>, M. Bengtsson and M. Skoglund, <i>Designing privacy filters for hidden Markov processes,</i> in proceedings of
+                                                                    <a target="_blank"><b>European Control Conference (ECC) (invited)</b></a>, 2021.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9654982">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[28]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, and M. Skoglund, <i>Nonasymptotic bounds using causal source coding on scalar-valued Gauss-Markov sources with MSE Distortion and causal side information,</i> in proceedings of
+                                                                    <a target="_blank"><b>Asilomar conference on signals, systems and computers</b></a>, 2020.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9443303">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[27]</td>
+                                                                <td align="justify" valign="top">M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Remote empirical coordination,</i> in proceedings of 
+                                                                    <a target="_blank"><b>International Symposium on Information Theory and Applications (ISITA)</b></a>, 2020.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9366135">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[26]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, and M. Skoglund, <i>Computation and system identification of a lower bound on scalar LQG control via a noisy communication link with delayed CaSI at the decoder,</i> in proceedings of 
+                                                                    <a target="_blank"><b>European Control Conference (ECC)</b></a>, 2020.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9143640">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[25]</td>
+                                                                <td align="justify" valign="top">M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Empirical coordination with multiple descriptions,</i> in proceedings of 
+                                                                    <a target="_blank"><b>57th Annual Allerton Conference on Communication, Control, and Computing</b></a>, 2019.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8919668">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[24]</td>
+                                                                <td align="justify" valign="top">H. Ghourchian, <b>P. A. Stavrou</b>, T. Oechtering, and M. Skoglund, <i>Block source coding with sequential encoding,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2019.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8989296">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[23]</td>
+                                                                <td align="justify" valign="top">M. Mylonakis, <b>P. A. Stavrou</b>, and M. Skoglund, <i>Empirical coordination subject to a fidelity criterion,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2019.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8989218">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[22]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous, C. D. Charalambous, S. Loyka, and M. Skoglund, <i>Asymptotic reverse-waterfilling solution of
+                                                                    nonanticipative rate distortion function for vector-valued Gauss-Markov sources with MSE distortion,</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE 57th Conference on Decision and Control (CDC)</b></a>, 2018.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8619725">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[21]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, <b>P. A. Stavrou</b>, C. K. Kourtellaris, and I. Tzortzis, <i>&quot;Directed Information subject to a fidelity:
+                                                                    applications to conditionally Gaussian processes,&quot;</i> in proceedings of <a target="_blank"><b>European Control Conference (ECC)</b></a>, 2018.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8550054">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[20]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, J. &#216;stergaard, and M. Skoglund, <i>&quot;On zero-delay source coding of LTI Gauss-Markov
+                                                                    systems with covariance matrix distortion constraints,&quot;</i> in proceedings of <a target="_blank"><b>European Control Conference (ECC)</b></a>, 2018.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8550204">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[19]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and J. &#216;stergaard, <i>&quot;Fixed-rate zero-delay source coding for stationary vector-valued Gauss-Markov sources,&quot;</i> in proceedings of <a target="_blank"><b>Data Compression Conference (DCC)</b></a>, 2018.<br/>
+                                                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/8416598/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[18]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, J. &#216;stergaard, C. D. Charalambous, and M. Derpich, <i>&quot;An upper bound to zero-delay rate distortion via Kalman filtering for Vector Gaussian
+                                                                    sources,&quot;</i> in proceedings of <a target="_blank"><b>IEEE Information Theory Workshop (ITW)</b></a>, 2017.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/8277966/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[17]</td>
+                                                                <td align="justify" valign="top">M. Barforooshan, J. &#216;stergaard, and <b>P. A. Stavrou</b>, <i>&quot;Achievable performance of zero-delay variable-rate coding in rate constrained networked control systems with channel delay,&quot;</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE Conference on Decision and Control (CDC)</b></a>, 2017.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/8264566/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[16]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and J. &#216;stergaard, <i>&quot;A lower bound on causal and zero-delay rate distortion for scalar Gaussian autoregressive sources,&quot;</i> in proceedings of 
+                                                                    <a target="_blank"><b>International Symposium on Information Theory and Signal Processing in Benelux (SITB)</b></a>, 2017.<br/>
+                                                                    <a target="_blank" href="http://cas.tudelft.nl/sitb2017/sitb2017proceedings.pdf">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[15]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, T. Charalambous, and C. D. Charalambous, <i>&quot;Filtering with fidelity for time-varying Gauss-Markov processes,&quot;</i> in proceedings of 
+                                                                    <a target="_blank"><b>IEEE 55th Conference on Decision and Control (CDC)</b></a>, 2016.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/document/7799108/">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[14]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. D. Charalambous, and C. K. Kourtellaris, <i>&quot;Sequential necessary and sufficient conditions for optimal channel input 
+                                                                    distributions of channels with memory and feedback,&quot;</i> in proceedings of
+                                                                    <a target="_blank"><b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2016.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7541309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D7541309"> Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[13]</td>
+                                                                <td align="justify" valign="top">C. K. Kourtellaris, C. D. Charalambous, J. Boutros, and <b>P. A. Stavrou</b>,  <i>&quot;Optimal communication
+                                                                    for sources and channels with memory and delay-sensitive applications,&quot;</i> in
+                                                                    proceedings of <a target="_blank"><b>Qatar Foundation
+                                                                    Annual Research Conference (ARC)</b></a>, 2014  (abstract only).<br/>
+                                                                    <a target="_blank" href="http://www.qscience.com/doi/pdf/10.5339/qfarc.2014.ITPP0820">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[12]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. K. Kourtellaris, and C. D. Charalambous, <i>&quot;Applications of information nonanticipative rate distortion function,&quot;</i> in
+                                                                    proceedings of <a target="_blank"><b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2014.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6875397&newsearch=true&queryText=Applications%20of%20information%20nonanticipative">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[11]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Optimization of directed information and relations to filtering theory,&quot;</i> 
+                                                                    in proceedings of<a target="_blank"><b> 13th European Control Conference (ECC)</b></a>, 2014.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6862534&searchWithin%3Dp_Authors%3A.QT.Stavrou%2C+P.%2FA%2F..QT.">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[10]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and C. D. Charalambous, <i>&quot;Variational equalities of directed information and applications &quot;</i> 
+                                                                    in proceedings of <a target="_blank"><b> IEEE International Symposium on Information Theory (ISIT)</b></a>, 2013.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6620692&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6620692">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[9]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;On the relation of nonanticipative rate distortion function and filtering theory,&quot;</i> 
+                                                                    in proceedings of <a target="_blank"><b> 12th Biannual European Control Conference (ECC)</b></a>, 2013.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6669138&queryText%3Don+the+relation+of+nonanticipative">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[8]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and C. D. Charalambous, <i>&quot;Causal rate distortion function and relations to filtering theory,&quot;</i> in proceedings of <a target="_blank">
+                                                                    <b>20th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2012. (Extended Abstract)<br/>
+                                                                    <a target="_blank" href="http://www.mtns2012.conference.net.au/Extended%20Abstract/MTNS2012_0148_paper.pdf">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[7]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Directed information on abstract Alphabets: properties and extremum problems,&quot;</i> 
+                                                                    in proceedings of <a target="_blank">
+                                                                    <b>IEEE International Symposium on Information Theory (ISIT)</b></a>, 2012.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6284243&queryText%3DDIRECTED+INFORMATION+ON+ABSTRACT">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[6]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. A. Stavrou</b>, <i>&quot;Rate distortion function with causal decoding,&quot;</i> in proceedings of 
+                                                                    <a target="_blank">
+                                                                    <b>49th IEEE Conference on Decision and Control (CDC)</b></a>, 2010.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5717369&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F5707200%2F5716927%2F05717369.pdf%3Farnumber%3D5717369">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[5]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;On the optimal reconstruction kernel of causal rate distortion function,&quot;</i> in proceedings of 
+                                                                    <a target="_blank">
+                                                                    <b>19th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2010. (Invited Paper)<br/>
+                                                                    <a target="_blank" href="http://www.conferences.hu/mtns2010/proceedings/Papers/214_305.pdf">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[4]</td>
+                                                                <td align="justify" valign="top">F. Rezaei, C. D. Charalambous and <b>P. A. Stavrou</b>, <i>&quot;Rate distortion function for a class of relative entropy sources,&quot;</i> in proceedings of 
+                                                                    <a target="_blank">
+                                                                    <b>19th International Symposium on Mathematical Theory of Networks and Systems (MTNS)</b></a>, 2010.<br/>
+                                                                    <a target="_blank" href="http://www.conferences.hu/mtns2010/proceedings/Papers/329_205.pdf">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[3]</td>
+                                                                <td align="justify" valign="top">F. Rezaei, C. D. Charalambous, <b>P. A. Stavrou</b> and C. K. Kourtellaris, <i>&quot;Minimax rate distortion for a class of sources,&quot;</i> in proceedings of
+                                                                    <a target="_blank">
+                                                                    <b>4th IEEE International Symposium on Communications, Control and Signal Processing (ISCCSP)</b></a>, 2010. (Invited Paper)<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5463428">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;Stochastic control over finite capacity channels: 
+                                                                    causality, feedback and uncertainty,&quot;</i> in proceedings of 
+                                                                    <a target="_blank">
+                                                                    <b>48th IEEE Conference on Decision and Control and 28th Chinese Control Conference(CDC-CCC)</b></a>, 2009.<br/>
+                                                                    <a target="_blank" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=5400824&queryText%3Dstochastic+control+over+finite+capacity+channels">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top">C. D. Charalambous, C. K. Kourtellaris and <b>P. Stavrou</b>, <i>&quot;Stochastic control over finite capacity channels: 
+                                                                    causality and feedback,&quot;</i> in proceedings of 
+                                                                    <a target="_blank">
+                                                                    <b>European Control Conference (ECC)</b></a>, 2009.<br/>
+                                                                    <a target="_blank" href="http://www.academia.edu/3305874/Stochastic_control_over_finite_capacity_channels_Causality_and_feedback">Full Text</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
+
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick5(); return false;" name="preprint_publications" id="preprints">Preprints (click)</a></font></b><br/>
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="preprint_publications" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Kountouris, <i>A rate distortion approach to goal-oriented communication,</i> 2022.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"Indirect NRDF for partially observable Gauss-Markov processes with MSE distortion: complete characterizations and optimal solutions,"</i> 2021.<br/>
+                                                                    <a target="_blank" href="https://arxiv.org/abs/1912.07640v4">Full Text</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
+
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick6(); return false;" name="technical_reports" id="technical">Technical Reports (click)</a></font></b><br/>
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="technical_reports" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[2]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b> and M. Skoglund, <i>"The zero-delay RDF for Gaussian processes with encoder-decoder causal side information,"</i> 2019.<br/>
+                                                                    <a target="_blank" href="http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1306744&dswid=5430">Full Text</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top"><b>P. A. Stavrou</b>, C. K. Kourtellaris and C. D. Charalambous, <i>"Information Nonanticipative RDF and its applications,"</i> 2014.<br/>
+                                                                    <a target="_blank" href="https://arxiv.org/abs/1405.1593">Full Text</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
+
+                                                    <b><font color="#0F5B7F"><a href="#" class="section-toggle" onclick="openOnClick7(); return false;" name="Demos" id="demos">Demos/Exhibitions (click)</a></font></b><br />
+                                                    <div class="table-mobile-wrap">
+                                                        <table border="0" hidden="true" width="100%" id="Demos" cellpadding="1" class="pub-table">
+                                                            <tr>
+                                                                <td width="25" align="left" valign="top">[1]</td>
+                                                                <td align="justify" valign="top">C. Sun, R. Ayassi, X. Yang, G. Charlet, <b>P. A. Stavrou</b>, and Y. Pointurier, <i>"Demonstration of LLM-based AI-Agent for Optical Network Management and Automation,"</i> <a target="_blank" href="https://www.ecoc2024.org/"><b> 50th European Conference and Exhibition on Optical Communications (ECOC)</b></a>,  2024.<br/>
+                                                                    <a target="_blank" href="https://express.converia.de/frontend/index.php?page_id=34825&v=List&do=15&day=5106&ses=32619#">Brief Explanation</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </table>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            var collapsePubmain = new animatedcollapse("Pubmain", 800, true);
+                        </script>
+
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70084577-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-70084577-1');
-</script>
-
-    </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70084577-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-70084577-1');
+    </script>
 
     <hr class="star-primary">
+
     <footer>
         <small>
             <center>
-            <p>Copyright &copy; 2026 Photios A. Stavrou. All rights reserved.</p>
+                <p>Copyright &copy; 2026 Photios A. Stavrou. All rights reserved.</p>
             </center>
         </small>
     </footer>
@@ -874,7 +797,7 @@
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
@@ -885,7 +808,7 @@
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
@@ -896,7 +819,7 @@
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
@@ -907,44 +830,44 @@
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
     }
-	function openOnClick5()
+    function openOnClick5()
     {
          var elem=document.getElementById("preprint_publications");
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
     }
-	function openOnClick6()
+    function openOnClick6()
     {
          var elem=document.getElementById("technical_reports");
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
     }
-	function openOnClick7()
+    function openOnClick7()
     {
          var elem=document.getElementById("Demos");
          var hide = elem.style.display =="table";
          if (hide) {
              elem.style.display="none";
-        } 
+        }
         else {
            elem.style.display="table";
         }
     }
-    </script>        
-    </body>
+    </script>
+</body>
 </html>
